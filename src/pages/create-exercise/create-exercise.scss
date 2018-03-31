@@ -1,0 +1,190 @@
+page-create-exercise {
+  // @media (min-width: 375px){
+  //   .exercise-box{
+  //     min-height: 80px !important;
+  //   }
+  // }
+  ion-content.content {
+    background: #232F4F;
+  }
+  .toolbar-background {
+    background: #2D3E66 !important;
+  }
+  .background{
+    background: #2D3E66 !important;
+  }
+  .tabbar-top {
+    white-space: nowrap;
+    position: relative;
+    width: 100%;
+    display: flex;
+    padding: 0 1rem;
+    background: #2D3E66 !important;
+    
+    .block-item {
+      text-align: center;
+      min-width: 33.333333333%;
+      padding: 1rem 0;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      color: rgba($color: white, $alpha: .6);
+      .circle {
+        height: 40px;
+        width: 40px;
+        background: rgba($color: white, $alpha: .1);
+        margin: auto;
+      }
+      .name {
+        margin-top: .3rem;
+      }
+      &.selected {
+        background: #232F4F;
+        color: white;
+      }
+    }
+  }
+  .padding-content{
+    height: 100%;
+  }
+  .box-container {
+    // height: 100%;
+    background: #232F4F; // border-top: 2px solid rgba($color: map-get($map: $appColors, $key: blue), $alpha: .2);
+    // border-bottom: 2px solid rgba($color: map-get($map: $appColors, $key: blue), $alpha: .2);
+    padding: 0 1rem 1rem 1rem;
+    
+    .exercise-box {
+      // min-height: 60px;
+      margin: 1rem 0;
+      &.selected {
+        border: 1px solid map-get($map: $appColors, $key: blue);
+      }
+      .name-exercise{
+        &.selected{
+          color: map-get($map: $appColors, $key: blue);
+        }
+      }
+      .circle{
+        height: 40px;
+        width: 40px;
+        font-size: 2.6rem;
+        &.small{font-size: .8rem;}
+        &.yellow{color: #FFCC00;}
+      }
+    }
+  }
+  .btn-toolbar {
+    font-size: 1rem;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    box-shadow: none;
+  }
+  .animate-bar {
+    width: 80%;
+    .bar-container {
+      .bar {
+        padding: 0;
+        height: 6px;
+        width: 16.6666667%;
+        &.animate {
+          width: 17.3%;
+          left: 0;
+          top: 0;
+        }
+      }
+    }
+  }
+  .box-container {
+    .exercise-box {
+      .circle {
+        background: rgba($color: white, $alpha: .1);
+        // margin: auto;
+        &.cardio{
+          color: map-get($map: $appColors, $key: tabata);
+        }
+        &.yoga{
+          color: map-get($map: $appColors, $key: yoga);
+        }
+        &.tiny{
+          height: 25px;
+          width: 25px;
+          font-size: 1.1rem;
+        }
+        &.no-checkmark {
+          background: rgba($color: #000000, $alpha: .4);
+        }
+        &.checkmark {
+          border: 1px solid map-get($map: $appColors, $key: blue);
+        }
+      }
+    }
+    .bar-bottom {
+      text-align: center;
+      position: relative;
+      .animate-bar {
+        width: 80%;
+        margin: auto;
+        .bar-container {
+          .bar {
+            padding: 0;
+            height: 6px;
+            &.animate {
+              left: 0;
+              top: 0;
+            }
+          }
+        }
+      }
+    }
+    .exercise-box {
+      min-height: 60px;
+      &.selected {
+        border: 1px solid map-get($map: $appColors, $key: blue);
+      }
+    }
+  }
+  .btn-container {
+    text-align: center;
+    width: 100%;
+    padding: 1.2rem 0;
+    .arrow-up {
+      top: -60px;
+      left: 50%;
+      transform: translateX(-50%);
+      height: 40px;
+      width: 40px;
+      border-radius: 20px;
+      background: rgba($color: white, $alpha: .1);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: map-get($map: $appColors, $key: blue);
+      .up {
+        transform: rotate(90deg);
+      }
+    }
+  }
+  
+  .btn-continue {
+    width: 80%;
+    margin: auto;
+    background: linear-gradient(to right, #00D8EB, #008DCD);
+    color: white;
+    text-transform: uppercase;
+  }
+  .footer .toolbar .toolbar-content {
+    position: relative;
+  }
+  .number {
+    width: 60px;
+    margin: auto;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    background: linear-gradient(to bottom, #344673, #2F3966, rgba($color: #2B305D, $alpha: 0));
+  }
+}

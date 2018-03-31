@@ -1,0 +1,230 @@
+<!--
+  Generated template for the SettingPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-toolbar>
+    <ion-buttons left>
+      <button icon-only ion-button navPop>
+        <ion-icon name="workout-icon-back"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title text-center>{{language.title}}</ion-title>
+    <ion-buttons right>
+      <button icon-only ion-button style="opacity: 0">
+        <ion-icon name="workout-icon-back"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+
+</ion-header>
+
+
+<ion-content class="app-content" padding>
+  <div class="container">
+    <div class="title">
+      <span>{{language.connect}}</span>
+    </div>
+    <div class="content-container">
+      <div class="top">
+        <ion-row>
+          <ion-col col-1>
+            <div class="circle-background facebook a3-container-center">
+              <ion-icon name="workout-icon-facebook"></ion-icon>
+            </div>
+          </ion-col>
+          <ion-col col-5>
+            <div class="name" margin-left>
+              <span>Facebook</span>
+            </div>
+          </ion-col>
+          <ion-col text-right>
+            <div class="connect" (click)="loginFacebook()" tappable>
+              <span>{{user.facebook}}</span>
+            </div>
+          </ion-col>
+        </ion-row>
+      </div>
+      <div class="line"></div>
+      <div class="bottom">
+        <ion-row (click)="loginGoogle()" tappable>
+          <ion-col col-1>
+            <div class="circle-background google a3-container-center">
+              <ion-icon name="workout-icon-google"></ion-icon>
+            </div>
+          </ion-col>
+          <ion-col col-5>
+            <div class="name" margin-left>
+              <span>Google</span>
+            </div>
+          </ion-col>
+          <ion-col text-right>
+            <div class="connect" >
+              <span>{{user.google}}</span>
+            </div>
+          </ion-col>
+        </ion-row>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="title">
+      <span>{{language.language}}</span>
+    </div>
+    <div class="content-container">
+      <div class="top">
+        <ion-row (click)="changeIsVn(2)" tappable>
+          <ion-col class="icon green" col-1>
+            <ion-icon *ngIf="user.language == 2" name="workout-icon-tick-1"></ion-icon>
+          </ion-col>
+          <ion-col>
+            <div class="name">
+              <span>English</span>
+            </div>
+          </ion-col>
+        </ion-row>
+      </div>
+      <div class="line"></div>
+      <div class="bottom">
+        <ion-row (click)="changeIsVn(1)" tappable>
+          <ion-col class="icon green" col-1>
+            <ion-icon *ngIf="user.language == 1" name="workout-icon-tick-1"></ion-icon>
+          </ion-col>
+          <ion-col>
+            <div class="name">
+              <span>Vietnamese</span>
+            </div>
+          </ion-col>
+        </ion-row>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="title">
+      <span>{{language.notifications}}</span>
+    </div>
+    <div class="content-container">
+      <div class="top">
+        <ion-row align-items-center>
+          <ion-col class="icon blue" col-1>
+            <ion-icon name="workout-icon-vibration"></ion-icon>
+          </ion-col>
+          <ion-col>
+            <div class="name">
+              <span>{{language.vibration}}</span>
+            </div>
+          </ion-col>
+          <ion-col col-5 offset-1>
+            <div class="toggle-container">
+              <div class="on" [class.selected]="!isVibration" tappable (click)="changeVibration()">
+                <span>{{language.off}}</span>
+              </div>
+              <div class="off" [class.selected]="isVibration" tappble (click)="changeVibration()">
+                <span>{{language.on}}</span>
+              </div>
+              <div class="bg" id="bg1"></div>
+            </div>
+          </ion-col>
+        </ion-row>
+      </div>
+      <div class="line"></div>
+      <div class="bottom">
+        <ion-row align-items-center>
+          <ion-col class="icon blue" col-1>
+            <ion-icon name="workout-icon-alarm"></ion-icon>
+          </ion-col>
+          <ion-col>
+            <div class="name">
+              <span>{{language.alarm}}</span>
+            </div>
+          </ion-col>
+          <ion-col col-5 offset-1>
+            <div class="toggle-container">
+              <div class="on" [class.selected]="!isAlarm" tappable (click)="changeIsAlarm()">
+                <span>{{language.off}}</span>
+              </div>
+              <div class="off" [class.selected]="isAlarm" tappable (click)="changeIsAlarm()">
+                <span>{{language.on}}</span>
+              </div>
+              <div class="bg" id="bg2"></div>
+            </div>
+          </ion-col>
+        </ion-row>
+      </div>
+      <div class="line"></div>
+      <div class="bottom">
+        <ion-row align-items-center>
+          <ion-col class="icon blue" col-1>
+            <ion-icon name="workout-icon-sound"></ion-icon>
+          </ion-col>
+          <ion-col>
+            <div class="name">
+              <span>{{language.sound}}</span>
+            </div>
+          </ion-col>
+          <ion-col col-5 offset-1>
+            <div class="toggle-container">
+              <div class="on" [class.selected]="!isSound" tappable (click)="changeIsSound()">
+                <span>{{language.off}}</span>
+              </div>
+              <div class="off" [class.selected]="isSound" tappable (click)="changeIsSound()">
+                <span>{{language.on}}</span>
+              </div>
+              <div class="bg" id="bg3"></div>
+            </div>
+          </ion-col>
+        </ion-row>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="title">
+      <span>{{language.physic}}</span>
+    </div>
+    <div class="content-container">
+      <div class="top">
+        <ion-row align-items-center (click)="showPromt(1)" tappable>
+          <ion-col class="icon blue" col-1>
+            <ion-icon name="workout-icon-height"></ion-icon>
+          </ion-col>
+          <ion-col>
+            <div class="name">
+              <span>{{language.height}}</span>
+            </div>
+          </ion-col>
+          <ion-col col-5 offset-1 text-right>
+            <span class="blue">{{user.physic.height}}</span>
+            <span class="color-gray"> cm</span>
+          </ion-col>
+        </ion-row>
+      </div>
+      <div class="line"></div>
+      <div class="top">
+        <ion-row align-items-center (click)="showPromt(2)" tappable>
+          <ion-col class="icon blue" col-1>
+            <ion-icon name="workout-icon-weight"></ion-icon>
+          </ion-col>
+          <ion-col>
+            <div class="name">
+              <span>{{language.weight}}</span>
+            </div>
+          </ion-col>
+          <ion-col col-5 offset-1 text-right>
+            <span class="blue">{{user.physic.weight}}</span>
+            <span class="color-gray"> kg</span>
+          </ion-col>
+        </ion-row>
+      </div>
+      <div class="line"></div>
+      <div class="top bmi">
+        <div class="normal-font color-white">{{language.bmi}}</div>
+        <div class="blue big-font" text-center>{{user.getMBI()}}</div>
+        <div class="normal-font color-white" text-center>{{user.getComment()}}</div>
+      </div>
+    </div>
+  </div>
+</ion-content>

@@ -1,0 +1,102 @@
+<!--
+  Generated template for the WorkoutPlayPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons left>
+      <button icon-only ion-button navPop>
+        <ion-icon name="workout-icon-back"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title text-center>{{exercise.name}}</ion-title>
+    <ion-buttons right>
+      <button icon-only ion-button style="opacity: 0">
+        <ion-icon name="workout-icon-back"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content class="app-content" #content no-bouce>
+  <div class="container">
+
+    <!-- top container -->
+    <div class="top-container">
+      <div class="square">
+        <div class="small-font">{{language.set}}</div>
+        <div class="number">
+          <span class="blue">{{workout.setDone}}</span><span>/{{exercise.getTotalExercise()}}</span>
+        </div>
+      </div>
+      <div class="type-text" [class.cardio]="exercise.type==1" [class.yoga]="exercise.type ==2"  [class.rest]="workout.type == 1">{{workout.text}}</div>
+      <div class="square">
+        <div class="small-font">{{language.reps}}</div>
+        <div class="number">
+          <span class="blue">{{workout.repsDone}}</span><span>/{{workout.reps}}</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- middle -->
+    <div class="middle-container">
+      <div class="animation">
+        <div *ngIf="workout.icons && workout.icons.length > 0 && workout.type == 0" class="a3-container-center" [class.circle]="exercise.type==2"
+          [class.cardio]="exercise.type==1" [class.yoga]="exercise.type ==2">
+          <ion-icon *ngFor="let icon of workout.icons" [name]="icon"></ion-icon>
+        </div>
+        <div class="a3-container-center " *ngIf="workout.type !=0 || workout.icons.length==0" [class.circle]="exercise.type==2" [class.cardio]="exercise.type==1">
+          <ion-icon name="workout-icon-freetime"></ion-icon>
+        </div>
+      </div>
+      <div class="timer" [class.cardio]= "exercise.type==1" [class.yoga]="exercise.type ==2">{{workout.timing}}</div>
+    </div>
+
+    <!-- summary -->
+    <div class="total-container">
+      <div class="box">
+        <ion-row>
+          <ion-col col-6 class="title">
+            <span>{{language.total}}</span>
+          </ion-col>
+          <ion-col col-4 offset-2 class="time-container">
+            <div class="icon">
+              <ion-icon name="workout-icon-time"></ion-icon>
+            </div>
+            <div class="text">
+              <span>{{exercise.getTotalTimeString()}}</span>
+            </div>
+          </ion-col>
+        </ion-row>
+        <div class="line"></div>
+        <ion-row>
+          <ion-col col-6 class="title">
+            <span>{{language.timenow}}</span>
+          </ion-col>
+          <ion-col col-4 offset-2 class="time-container">
+            <div class="icon">
+              <ion-icon name="workout-icon-time"></ion-icon>
+            </div>
+            <div class="text color">
+              <span>{{workout.getTimeNowString()}}</span>
+            </div>
+          </ion-col>
+        </ion-row>
+      </div>
+    </div>
+
+    <!-- buttons -->
+    <div class="button-container">
+      <button ion-button icon-only class="btn-bottom" (click)="playAndPause()">
+        <!-- <ion-icon *ngIf="!isPlay" name="workout-icon-play"></ion-icon> -->
+        <ion-icon *ngIf="workout.isRunning" name="workout-icon-pause"></ion-icon>
+        <span *ngIf="!workout.isRunning"> {{language.start}} </span>
+      </button>
+      <!-- <button ion-button class="btn-bottom" (click)="done()">Done</button> -->
+    </div>
+    <!-- <audio id="audio" src="./assets/audio/td_ding.ogg" type="audio/ogg" preload="auto"></audio> -->
+  </div>
+</ion-content>

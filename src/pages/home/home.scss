@@ -1,0 +1,106 @@
+page-home {
+  .toolbar-title-md {
+    font-weight: unset;
+  }
+  .today {
+    font-size: 1.6rem;
+    color: white;
+  }
+  .date {
+    text-align: center;
+    color: rgba($color: white, $alpha: .6);
+    font-size: 1.2rem;
+    margin-top: .4rem;
+  }
+  .top {
+    // max-height: 40%;
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba($color: map-get($map: $appColors, $key: blue), $alpha: .1);
+    width: 100%;
+    background: transparent;
+    .animate-bar {
+      margin-top: 1.6rem;
+    }
+    .bar {
+      max-height: 30px;
+      padding: .6rem 1rem;
+      &.animate {
+        transition: 100ms;
+      }
+    }
+    .day-of-week {
+      width: 100%;
+      white-space: nowrap;
+      padding-bottom: .4rem;
+      border-bottom: 1px solid rgba($color: map-get($map: $appColors, $key: blue), $alpha: .1);
+      .day {
+        width: 14.2857143%;
+        text-align: center;
+        font-size: 1.4rem;
+        color: map-get($map: $appColors, $key: blue);
+        
+      }
+    }
+    .day-in-month {
+      .day {
+        width: 14.2857143%;
+        text-align: center;
+        padding: .2rem;
+        color: rgba($color: white, $alpha: .6);
+        position: relative;
+        .circle{
+          &.selected{
+            border: 1px solid map-get($map: $appColors, $key: blue);
+          }
+        }
+      }
+    }
+  }
+  .bottom {
+    width: 100%;
+    background: transparent;
+    .exercise-container {
+      padding-top: 1rem;
+      padding-bottom: .4rem;
+      .exercise-box{
+        .circle{
+          font-size: .6rem;
+          background: rgba($color: white, $alpha: .1);
+          color: map-get($map: $appColors, $key: blue);
+          &.yellow{
+            color: map-get($map: $appColors, $key: yellow);
+          }
+        }
+      }
+    }
+    .animate-bar {
+      padding: 0 5vw;
+      margin-top: 1.6rem;
+      .bar-container {
+        border-radius: 20px;
+        .bar {
+          height: 6px;
+          padding: 0;
+          width: 60px;
+          &.animate {
+            width: 60px;
+            border-radius: 20px;
+            top: 0;
+          }
+        }
+      }
+    }
+  }
+  .margin-top-left {
+    margin: 1rem 0;
+  }
+  .btn-container {
+    padding: 1.6rem 0;
+    width: 100%;
+    position: relative;
+    text-align: center;
+  }
+  .text-time {
+    margin-left: .6rem;
+  }
+}

@@ -1,0 +1,80 @@
+page-faq {
+  ion-content.content {
+    background: #232F4F;
+  }
+  .toolbar-background {
+    background: #2D3E66 !important;
+  }
+  $circle: 40px;
+  .faq-content {
+    background: #232F4F;
+    padding: 1rem;    
+  }
+  .tab-container {
+    width: 100%;
+    padding: 0 1rem;
+    background: #2D3E66 !important;
+    white-space: nowrap;
+    overflow: auto;
+    .tab-item {
+      width: 33%;
+      display: inline-block;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      padding: 1rem 0;
+      text-align: center;
+      &.selected {
+        background: #232F4F;
+      }
+      .icon-container {
+        height: $circle;
+        width: $circle;
+        border-radius: 50%;
+        background: rgba($color: white, $alpha: .1);
+        font-size: 1.8rem;
+        margin: auto;
+      }
+      .name {
+        font-size: map-get($map: $appSizes, $key: small);
+        color: #828AA5;
+        margin-top: .4rem;
+      }
+    }
+  }
+  .according-container{
+      padding: 1rem;
+  }
+  .accordion {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgba($color: map-get($map: $appColors, $key: blue), $alpha: .2);
+    padding-bottom: 1rem;
+    .question {
+      min-width: 90%;
+      color: map-get($map: $appColors, $key: blue);
+      font-size: map-get($map: $appSizes, $key: normal);
+    }
+    .btn-arrow {
+      color: white;
+      font-size: .8rem;
+      background: transparent;
+      transform: rotate(180deg);
+      transition: 200ms ease-in-out;
+      &.up {
+        transform: rotate(0);
+      }
+    }
+  }
+  .panel {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    white-space: pre-line;
+    p{
+        padding: 0;
+        margin: 0;
+        font-size: map-get($map: $appColors, $key: small);
+        line-height: 1.6em;
+    }
+  }
+}

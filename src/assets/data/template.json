@@ -1,0 +1,870 @@
+{
+  "exercise": {
+    "cardio": [{
+        "id": "cd1",
+        "name": "Jumping Jack",
+        "icon": "workout-icon-cardio",
+        "color": "#35EBBB",
+        "stickman": ["workout-icon-c_1a", "workout-icon-c_1b"],
+        "type": 1
+      },
+      {
+        "id": "cd2",
+        "name": "Leg Raise",
+        "icon": "workout-icon-cardio",
+        "color": "#35EBBB",
+        "stickman": ["workout-icon-c_2a", "workout-icon-c_2b"],
+        "type": 1
+      },
+      {
+        "id": "cd3",
+        "name": "Squat Jump",
+        "icon": "workout-icon-cardio",
+        "color": "#35EBBB",
+        "stickman": ["workout-icon-c_3a", "workout-icon-c_3b"],
+        "type": 1
+      },
+      {
+        "id": "cd4",
+        "name": "Glute bridge march",
+        "icon": "workout-icon-cardio",
+        "color": "#35EBBB",
+        "stickman": ["workout-icon-c_4a","workout-icon-c_4b"],
+        "type": 1
+      },
+      {
+        "id": "cd5",
+        "name": "Jumping lunges",
+        "icon": "workout-icon-cardio",
+        "color": "#35EBBB",
+        "stickman": ["workout-icon-c_5a","workout-icon-c_5b"],
+        "type": 1
+      },
+      {
+        "id": "cd6",
+        "name": "Bicycle Crunch",
+        "icon": "workout-icon-cardio",
+        "color": "#35EBBB",
+        "stickman": ["workout-icon-c_6a", "workout-icon-c_6b"],
+        "type": 1
+      },
+      {
+        "id": "cd7",
+        "name": "High-knee Run",
+        "icon": "workout-icon-cardio",
+        "color": "#35EBBB",
+        "stickman": ["workout-icon-c_7a", "workout-icon-c_7b"],
+        "type": 1
+      },
+      {
+        "id": "cd8",
+        "name": "cross jack",
+        "icon": "workout-icon-cardio",
+        "color": "#35EBBB",
+        "stickman":["workout-icon-c_8a", "workout-icon-c_8b"],
+        "type": 1
+      },
+      {
+        "id": "cd9",
+        "name": "Lunge skip",
+        "icon": "workout-icon-cardio",
+        "color": "#35EBBB",
+        "stickman": ["workout-icon-c_9a", "workout-icon-c_9b"],
+        "type": 1
+      },
+      {
+        "id": "cd10",
+        "name": "tuck jump",
+        "icon": "workout-icon-cardio",
+        "color": "#35EBBB",
+        "stickman": ["workout-icon-c_10a", "workout-icon-c_10b"],
+        "type": 1
+      },
+      {
+        "id": "cd11",
+        "name": "Flutter Kick",
+        "icon": "workout-icon-cardio",
+        "color": "#35EBBB",
+        "stickman": ["workout-icon-c_11a", "workout-icon-c_11b"],
+        "type": 1
+      },
+      {
+        "id": "cd12",
+        "name": "Glute kickback",
+        "icon": "workout-icon-cardio",
+        "color": "#35EBBB",
+        "stickman": "",
+        "type": 1
+      },
+      {
+        "id": "cd13",
+        "name": "crunch",
+        "icon": "workout-icon-cardio",
+        "color": "#35EBBB",
+        "stickman": ["workout-icon-c_13a", "workout-icon-c_13b"],
+        "type": 1
+      },
+      {
+        "id": "cd14",
+        "name": "slide lunges",
+        "icon": "workout-icon-cardio",
+        "color": "#35EBBB",
+        "stickman": ["workout-icon-c_14a", "workout-icon-c_14b"],
+        "type": 1
+      },
+      {
+        "id": "cd15",
+        "name": "plank tucks",
+        "icon": "workout-icon-cardio",
+        "color": "#35EBBB",
+        "stickman": ["workout-icon-c_15a", "workout-icon-c_15b"],
+        "type": 1
+      },
+      {
+        "id": "cd16",
+        "name": "switch jump",
+        "icon": "workout-icon-cardio",
+        "color": "#35EBBB",
+        "stickman": ["workout-icon-c_16a", "workout-icon-c_16b"],
+        "type": 1
+      },
+      {
+        "id": "cd17",
+        "name": "curtsy lunge kick",
+        "icon": "workout-icon-cardio",
+        "color": "#35EBBB",
+        "stickman": ["workout-icon-c_17a", "workout-icon-c_17b"],
+        "type": 1
+      },
+      {
+        "id": "cd18",
+        "name": "side-to-side crunch",
+        "icon": "workout-icon-cardio",
+        "color": "#35EBBB",
+        "stickman": ["workout-icon-c_18a", "workout-icon-c_18b"],
+        "type": 1
+      },
+      {
+        "id": "cd19",
+        "name": "Dip kick",
+        "icon": "workout-icon-cardio",
+        "color": "#35EBBB",
+        "stickman": ["workout-icon-c_19a", "workout-icon-c_19b"],
+        "type": 1
+      },
+      {
+        "id": "cd20",
+        "name": "crunches",
+        "icon": "workout-icon-cardio",
+        "color": "#35EBBB",
+        "stickman": ["workout-icon-c_20a", "workout-icon-c_20b"],
+        "type": 1
+      },
+      {
+        "id": "cd21",
+        "name": "drop jump",
+        "icon": "workout-icon-cardio",
+        "color": "#35EBBB",
+        "stickman": "",
+        "type": 1
+      },
+      {
+        "id": "cd22",
+        "name": "Squat Jump",
+        "icon": "workout-icon-cardio",
+        "color": "#35EBBB",
+        "stickman": "",
+        "type": 1
+      },
+      {
+        "id": "cd23",
+        "name": "knees and toes",
+        "icon": "workout-icon-cardio",
+        "color": "#35EBBB",
+        "stickman": ["workout-icon-c_23a", "workout-icon-c_23b"],
+        "type": 1
+      },
+      {
+        "id": "cd24",
+        "name": "sumo squat",
+        "icon": "workout-icon-cardio",
+        "color": "#35EBBB",
+        "stickman": "",
+        "type": 1
+      },
+      {
+        "id": "cd25",
+        "name": "split lunge jumps",
+        "icon": "workout-icon-cardio",
+        "color": "#35EBBB",
+        "stickman": ["workout-icon-c_25a", "workout-icon-c_25b"],
+        "type": 1
+      },
+      {
+        "id": "cd26",
+        "name": "squat jump 180 deg",
+        "icon": "workout-icon-cardio",
+        "color": "#35EBBB",
+        "stickman": "",
+        "type": 1
+      },
+      {
+        "id": "cd27",
+        "name": "hít đất xoay người",
+        "icon": "workout-icon-cardio",
+        "color": "#35EBBB",
+        "stickman": "",
+        "type": 1
+      },
+      {
+        "id": "cd28",
+        "name": "gate swings",
+        "icon": "workout-icon-cardio",
+        "color": "#35EBBB",
+        "stickman": "",
+        "type": 1
+      },
+      {
+        "id": "cd29",
+        "name": "pilates scissors",
+        "icon": "workout-icon-cardio",
+        "color": "#35EBBB",
+        "stickman": "",
+        "type": 1
+      },
+      {
+        "id": "cd30",
+        "name": "breakdancer kick",
+        "icon": "workout-icon-cardio",
+        "color": "#35EBBB",
+        "stickman": "",
+        "type": 1
+      }
+    ],
+    "yoga": [{
+        "id": "yg1",
+        "name": "Archer's Pose",
+        "icon": "workout-icon-yoga",
+        "color": "#FFD65A",
+        "stickman": ["workout-icon-y_1"],
+        "type": 1
+      },
+      {
+        "id": "yg2",
+        "name": "Tree Pose",
+        "icon": "workout-icon-yoga",
+        "color": "#FFD65A",
+        "stickman": ["workout-icon-y_2"],
+        "type": 1
+      },
+      {
+        "id": "yg3",
+        "name": "Bridge Pose",
+        "icon": "workout-icon-yoga",
+        "color": "#FFD65A",
+        "stickman": ["workout-icon-y_3"],
+        "type": 1
+      },
+      {
+        "id": "yg4",
+        "name": "Big Toe Pose",
+        "icon": "workout-icon-yoga",
+        "color": "#FFD65A",
+        "stickman": ["workout-icon-y_4"],
+        "type": 1
+      },
+      {
+        "id": "yg5",
+        "name": "Bound Angle / Cobbler’s / Butterfly Pose",
+        "icon": "workout-icon-yoga",
+        "color": "#FFD65A",
+        "stickman": ["workout-icon-y_5"],
+        "type": 1
+      },
+      {
+        "id": "yg6",
+        "name": "Bound Angle Headstand Pose",
+        "icon": "workout-icon-yoga",
+        "color": "#FFD65A",
+        "stickman": ["workout-icon-y_6"],
+        "type": 1
+      },
+      {
+        "id": "yg7",
+        "name": "Bow Pose",
+        "icon": "workout-icon-yoga",
+        "color": "#FFD65A",
+        "stickman": ["workout-icon-y_7"],
+        "type": 1
+      },
+      {
+        "id": "yg8",
+        "name": "Bridge Pose on Elbows",
+        "icon": "workout-icon-yoga",
+        "color": "#FFD65A",
+        "stickman": ["workout-icon-y_8"],
+        "type": 1
+      },
+      {
+        "id": "yg9",
+        "name": "Camel Pose",
+        "icon": "workout-icon-yoga",
+        "color": "#FFD65A",
+        "stickman": ["workout-icon-y_9"],
+        "type": 1
+      },
+      {
+        "id": "yg10",
+        "name": "Cat Pose",
+        "icon": "workout-icon-yoga",
+        "color": "#FFD65A",
+        "stickman": ["workout-icon-y_10"],
+        "type": 1
+      },
+      {
+        "id": "yg11",
+        "name": "Chair Pose",
+        "icon": "workout-icon-yoga",
+        "color": "#FFD65A",
+        "stickman": ["workout-icon-y_11"],
+        "type": 1
+      },
+      {
+        "id": "yg12",
+        "name": "Child Pose",
+        "icon": "workout-icon-yoga",
+        "color": "#FFD65A",
+        "stickman": ["workout-icon-y_12"],
+        "type": 1
+      },
+      {
+        "id": "yg13",
+        "name": "Cobra Pose",
+        "icon": "workout-icon-yoga",
+        "color": "#FFD65A",
+        "stickman": "",
+        "type": 1
+      },
+      {
+        "id": "yg14",
+        "name": "Compass Pose",
+        "icon": "workout-icon-yoga",
+        "color": "#FFD65A",
+        "stickman": ["workout-icon-y_14"],
+        "type": 1
+      },
+      {
+        "id": "yg15",
+        "name": "One Legged Bridge Pose",
+        "icon": "workout-icon-yoga",
+        "color": "#FFD65A",
+        "stickman": ["workout-icon-y_15"],
+        "type": 1
+      },
+      {
+        "id": "yg16",
+        "name": "monkey pose",
+        "icon": "workout-icon-yoga",
+        "color": "#FFD65A",
+        "stickman": ["workout-icon-y_16"],
+        "type": 1
+      },
+      {
+        "id": "yg17",
+        "name": "Cow Pose",
+        "icon": "workout-icon-yoga",
+        "color": "#FFD65A",
+        "stickman": ["workout-icon-y_17"],
+        "type": 1
+      },
+      {
+        "id": "yg18",
+        "name": "Crane Pose",
+        "icon": "workout-icon-yoga",
+        "color": "#FFD65A",
+        "stickman": ["workout-icon-y_18"],
+        "type": 1
+      },
+      {
+        "id": "yg19",
+        "name": "Full Boat Pose",
+        "icon": "workout-icon-yoga",
+        "color": "#FFD65A",
+        "stickman": ["workout-icon-y_19"],
+        "type": 1
+      },
+      {
+        "id": "yg20",
+        "name": "Dolphin Pose",
+        "icon": "workout-icon-yoga",
+        "color": "#FFD65A",
+        "stickman": ["workout-icon-y_20"],
+        "type": 1
+      },
+      {
+        "id": "yg21",
+        "name": "Dove pose",
+        "icon": "workout-icon-yoga",
+        "color": "#FFD65A",
+        "stickman": ["workout-icon-y_21"],
+        "type": 1
+      },
+      {
+        "id": "yg22",
+        "name": "Downward Facing Dog Pose",
+        "icon": "workout-icon-yoga",
+        "color": "#FFD65A",
+        "stickman": ["workout-icon-y_22"],
+        "type": 1
+      },
+      {
+        "id": "yg23",
+        "name": "Half Boat Pose",
+        "icon": "workout-icon-yoga",
+        "color": "#FFD65A",
+        "stickman": ["workout-icon-y_23"],
+        "type": 1
+      },
+      {
+        "id": "yg24",
+        "name": "Easy Pose",
+        "icon": "workout-icon-yoga",
+        "color": "#FFD65A",
+        "stickman": ["workout-icon-y_24"],
+        "type": 1
+      },
+      {
+        "id": "yg25",
+        "name": "Elimination Pose",
+        "icon": "workout-icon-yoga",
+        "color": "#FFD65A",
+        "stickman": ["workout-icon-y_25"],
+        "type": 1
+      },
+      {
+        "id": "yg26",
+        "name": "Extended Hand to Big Toe Pose",
+        "icon": "workout-icon-yoga",
+        "color": "#FFD65A",
+        "stickman": ["workout-icon-y_26"],
+        "type": 1
+      },
+      {
+        "id": "yg27",
+        "name": "Extended Puppy Pose",
+        "icon": "workout-icon-yoga",
+        "color": "#FFD65A",
+        "stickman": ["workout-icon-y_27"],
+        "type": 1
+      },
+      {
+        "id": "yg28",
+        "name": "Extended Side Angle pose",
+        "icon": "workout-icon-yoga",
+        "color": "#FFD65A",
+        "stickman": ["workout-icon-y_28"],
+        "type": 1
+      },
+      {
+        "id": "yg29",
+        "name": "Standing split",
+        "icon": "workout-icon-yoga",
+        "color": "#FFD65A",
+        "stickman": ["workout-icon-y_29"],
+        "type": 1
+      },
+      {
+        "id": "yg30",
+        "name": "Lord of Dancers Pose",
+        "icon": "workout-icon-yoga",
+        "color": "#FFD65A",
+        "stickman": ["workout-icon-y_30"],
+        "type": 1
+      }
+    ]
+  },
+  "template": {
+    "cardio": [{
+        "id": "cardiobeginer",
+        "name": "Basic",
+        "icon": "workout-icon-star",
+        "exerciseListIDs": ["cd1", "cd2", "cd3", "cd4", "cd5"],
+        "timer": {
+          "work": 30,
+          "rest": 10,
+          "reps": 2,
+          "break": 30,
+          "delay": 5
+          
+        },
+        "type": 1,
+        "level": 1
+      },
+      {
+        "id": "cardiomedium",
+        "name": "Medium",
+        "icon": "workout-icon-star",
+        "exerciseListIDs": ["cd10", "cd11", "cd12", "cd13", "cd15"],
+        "timer": {
+          "work": 40,
+          "rest": 10,
+          "reps": 3,
+          "break": 60,
+          "delay": 5
+          
+        },
+        "type": 1,
+        "level": 2
+      },
+      {
+        "id": "cardiohigh",
+        "name": "Cardio core",
+        "icon": "workout-icon-star",
+        "exerciseListIDs": ["cd16", "cd19", "cd20", "cd22", "cd24", "cd25", "cd23"],
+        "timer": {
+          "work": 60,
+          "rest": 10,
+          "reps": 3,
+          "break": 60,
+          "delay": 5
+          
+        },
+        "type": 1,
+        "level": 3
+      }
+    ],
+    "yoga": [{
+        "id": "yogabeginer",
+        "name": "Beginner",
+        "icon": "workout-icon-star",
+        "exerciseListIDs": ["yg1", "yg2", "yg12", "yg3", "yg11"],
+        "timer": {
+          "work": 30,
+          "rest": 15,
+          "reps": 3,
+          "break": 30,
+          "delay": 5
+          
+        },
+        "type": 2,
+        "level": 1
+      },
+      {
+        "id": "yogamedium",
+        "name": "Mediate",
+        "icon": "workout-icon-star",
+        "exerciseListIDs": ["yg4", "yg6", "yg7", "yg14", "yg15", "yg13", "yg16"],
+        "timer": {
+          "work": 45,
+          "rest": 20,
+          "reps": 5,
+          "break": 30,
+          "delay": 5
+        },
+        "type": 2,
+        "level": 2
+      },
+      {
+        "id": "yogahigh",
+        "name": "Intermediate",
+        "icon": "workout-icon-star",
+        "exerciseListIDs": ["yg20", "yg21", "yg23", "yg24", "yg25","yg27","yg28","yg30","ygyg25"],
+        "timer": {
+          "work": 60,
+          "rest": 20,
+          "reps": 5,
+          "break": 60,
+          "delay": 5
+        },
+        "type": 2,
+        "level": 3
+      }
+    ]
+  },
+  "language": {
+    "es": {
+      "home": {
+        "title": "Today",
+        "dayofweek": ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+        "today": "Today",
+        "checkday": "Check-day",
+        "monthago": "2 months ago",
+        "lastmonth": "Last month",
+        "thismonth": "This month",
+        "null": "Null",
+        "readyworkout": "Ready Workout",
+        "set": "Set",
+        "reps": "Reps"
+      },
+      "settings": {
+        "title": "Setting",
+        "connect": "Connect",
+        "language": "Language",
+        "notifications": "Notifications",
+        "vibration": "Vibration",
+        "alarm": "Alarm",
+        "sound": "Sound",
+        "on": "On",
+        "off": "Off",
+        "physic": "Physic",
+        "height": "height",
+        "weight": "weight",
+        "bmi": "Your MBI result:",
+        "placehodlerHeight": "Input height",
+        "placehodlerWeight": "Input Weight",
+        "cancel": "Cancel",
+        "ok": "Save"
+      },
+      "exercise": {
+        "title": "Exercise",
+        "startworkout": "Start Workout",
+        "deleteTitle": "Delete Exercise",
+        "question": "Are you want to delete this exercise",
+        "cancel": "Cancel",
+        "delete": "Delete",
+        "set": "Set",
+        "reps": "Reps"
+      },
+      "createexercise": {
+        "title": "Create Exercise",
+        "select": "Selected",
+        "create": "Create",
+        "createsucess": "Create exercise sucess"
+      },
+      "settime": {
+        "title": "Exercise Name",
+        "work": "Work",
+        "rest": "Rest",
+        "reps": "Reps",
+        "break": "Break",
+        "delay": "Delay",
+        "placeholder": "Input name of exericse",
+        "cancel": "Cancel",
+        "ok": "Save",
+        "accept": "Accept"
+      },
+      "workout": {
+        "set": "Set",
+        "reps": "Reps",
+        "total": "Total time",
+        "timenow": "Time now",
+        "start": "Start"
+      },
+      "done": {
+        "caloburned": "Total Kcal",
+        "totaltime": "Total time",
+        "totalwork": "Total work",
+        "circle": "Circle",
+        "backtohome": "Back To Home"
+      },
+      "appcontroller": {
+        "deletesucess": "Delete Exercise Sucess",
+        "deletefail": "You can't delete this exerics",
+        "facebooksucess": "Login facebook sucess",
+        "facebookfail": "Login facebook fail, Can't connect to serve",
+        "facebookerror": "Can't login facebook",
+        "googlesucess": "Login google sucess",
+        "googlefail": "Login google fail, Can't connect to serve",
+        "googleerror": "Can't login google",
+        "connected": "Connected"
+      }
+    },
+    "vn": {
+      "home": {
+        "title": "Hôm nay",
+        "dayofweek": ["T2", "T3", "T4", "T5", "T6", "T7", "CN"],
+        "today": "Hôm nay",
+        "checkday": "Ngày đã tập",
+        "monthago": "2 tháng trước",
+        "lastmonth": "Tháng trước",
+        "thismonth": "Tháng này",
+        "null": "Danh sách rỗng",
+        "readyworkout": "Sẵn sàng tập",
+        "set": "Động tác",
+        "reps": "Lặp"
+      },
+      "settings": {
+        "title": "Cài đặt",
+        "connect": "Kết nối",
+        "language": "Ngôn ngữ",
+        "notifications": "Thông báo",
+        "vibration": "Rung",
+        "alarm": "Báo đèn",
+        "sound": "Âm thanh",
+        "on": "Bật",
+        "off": "Tắt",
+        "physic": "Sức khoẻ",
+        "height": "Chiều cao",
+        "weight": "Cân nặng",
+        "bmi": "Chỉ số MBI của bạn :",
+        "placehodlerHeight": "Nhập chiều cao của bạn",
+        "placehodlerWeight": "Nhập cân nặng của bạn",
+        "cancel": "Huỷ",
+        "ok": "Lưu"
+      },
+      "exercise": {
+        "title": "Bài tập",
+        "startworkout": "Bắt đầu bài tập",
+        "deleteTitle": "Xoá bài tập",
+        "question": "Bạn muốn xoá bài tập",
+        "cancel": "Huỷ",
+        "delete": "Xoá",
+        "set": "Động tác",
+        "reps": "Lặp"
+      },
+      "createexercise": {
+        "title": "Tạo bài tập",
+        "select": "Đã chọn",
+        "create": "Tạo bài tập",
+        "createsucess": "Tạo bài tập thành công"
+      },
+      "settime": {
+        "title": "Tên bài tập",
+        "work": "Thời gian 1 động tác",
+        "rest": "Thời gian nghỉ sau 1 động tác",
+        "reps": "Số lần lặp lại",
+        "break": "Thời gian nghỉ giữa mỗi lần lặp",
+        "delay": "Thời gian trễ",
+        "placeholder": "Nhập tên bài tập",
+        "cancel": "Huỷ",
+        "ok": "Lưu",
+        "accept": "Lưu"
+      },
+      "workout": {
+        "set": "Động tác",
+        "reps": "Lặp",
+        "total": "Tổng thời gian",
+        "timenow": "Thời gian đã tập",
+        "start": "Bắt đầu"
+      },
+      "done": {
+        "caloburned": "Tổng lượng calo đã tiêu hao",
+        "totaltime": "Tổng thời gian",
+        "totalwork": "Số động tác",
+        "circle": "Số lần lặp lại",
+        "backtohome": "Trang chủ"
+      },
+      "appcontroller": {
+        "deletesucess": "Xoá bài tập thành công",
+        "deletefail": "Bạn không thể xoá bài tập này",
+        "facebooksucess": "Đăng nhập facebook thành công",
+        "facebookfail": "Đăng nhập facebook thất bại, Không thể kết nối máy chủ",
+        "facebookerror": "Không thể đăng nhập facebook",
+        "googlesucess": "Đăng nhập google thành công",
+        "googlefail": "Đăng nhập google thất bại, Không thể kết nối máy chủ",
+        "googleerror": "Không thể đăng nhập google",
+        "connected": "Đã kết nối"
+      }
+    }
+  },
+  "faq": {
+    "es": {
+      "cardio": [
+        {
+        "question": "What is Cardio ?",
+        "answer": "Cardio (Cardiovascular) is any exercise that increases the heart rate so that the cardiovascular system is healthy, providing more oxygen to the cells in the muscles allowing the cells to burn fat faster during exercise and even when not working."
+        },
+        {
+        "question": "Where can I perform Cardio ?",
+        "answer": "If you are interested in giving Cardio a try, we recommend searching online or locally in your area for health and fitness professionals that are fully qualified to teach this up and coming type of high-intensity fitness program. Cardio has now become a very popular form of exercise that has really taken off, so it should not be hard to find the class that is right for you within easy reach of your location."
+        },
+        {
+        "question": "What are the benefits of Cardio ?",
+        "answer": "Improve cardiovascular health \n Burn Calories, reduce fat \n Enhances the body's resilience \n Increases metabolism and regulates hormone levels in the body"
+        },
+        {
+        "question": "What equipment do I need for Cardio ?",
+        "answer": "Timer device \n 1 pair of sports shoes"
+        },
+        {
+        "question": "Disadvantages of Cardio ?",
+        "answer": "Cardio training too much will lead to muscle aches and your muscles will gradually disappear \n Excessive exercise also causes insomnia due to excessive amount of adrenaline in the body \n Cardio training is slow, calories burn less, BMR does not increase and strength, the speed of the body does not improve as well as osteoporosis is not effective."
+        },
+        {
+        "question": "Advantages of Cardio?",
+        "answer": "Save time \n Can practice everywhere \n Increases BMR, helps burn energy continuously throughout the day and reduces fat faster \n Increased endurance, body speed and support for stronger skeletal development, osteoporosis reduction as an adult"
+        },
+        {
+          "question": "How many times a week should I practice Cardio ?",
+          "answer": "For low intensity Cardio: you can practice everyday or 5-6 sessions/week \n For high intensity Cardio: you can’t practice more than 3 sessions/week and you"
+        }
+      ],
+      "yoga": [
+        {
+          "question": "What’s Yoga ?",
+          "answer" : "It is often said that yoga is a strange bending exercise. But actually yoga includes exercises that improve the physical, mental, emotional and spiritual well-being of the practitioner"
+        },
+        {
+          "question": "What do Yoga need ?",
+          "answer" : "Rug \n Comfortable clothes \n Barefoot"
+        },
+        {
+          "question": "Benefits of Yoga?",
+          "answer" : "The mental feel good \n Improve physique \n Improve health \n Preserve beauty improve sex life"
+        },
+        {
+          "question": "How many times a week should I practice Yoga?",
+          "answer" : "Best is 3-5 days / week, each practice from 30m-1 hour \n Best practice time: early morning, late evening"
+        }
+      ]
+    },
+    "vn": {
+      "cardio" : [
+        {
+          "question": "Cardio là gì ?",
+          "answer" : "Cardio (Cardiovascular) là bất kỳ bài tập thể dục nào làm tăng nhịp tim giúp hệ thống tim mạch khỏe mạnh, cung cấp nhiều oxy đến các tế bào trong cơ bắp cho phép các tế bào đốt cháy chất béo nhanh hơn trong quá trình tập luyện và cả khi không hoạt động."
+        },
+        {
+          "question": "Tôi có thể tập Cardio ở đâu ?",
+          "answer" :"Nếu bạn quan tâm đến việc dùng thử Cardio, chúng tôi khuyên bạn nên tìm kiếm trực tuyến hoặc địa phương trong khu vực của bạn cho các chuyên gia về sức khoẻ và thể dục thể thao đủ điều kiện để giảng dạy chương trình thể dục cường độ cao này và sắp tới. \n Cardio bây giờ đã trở thành một hình thức tập thể dục rất phổ biến đã thực sự cất cánh, do đó không khó để tìm được lớp học phù hợp với bạn trong tầm tay của vị trí của bạn."
+        },
+        {
+          "question": "Lợi ích của Cardio là gì ?",
+          "answer" :"Cải thiện sức khỏe tim mạch \n Đốt calo, giảm mỡ \n Tăng khả năng phục hồi của cơ thể \n Tăng cường trao đổi chất và điều hòa lượng hoocmon trong cơ thể"
+        },
+        {
+          "question": "Tôi cần dụng cụ hay thiết bị nào để tập luyện Cardio ?",
+          "answer" :"Thiết bị hẹn giờ  \n Một đôi giày thể thao"
+        },
+        {
+          "question": "Nhược điểm của Cardio là gì ?",
+          "answer" :"Luyện tập Cardio quá mức sẽ dẫn đến đau cơ và khiến cơ bắp của bạn dần dần biến mất \n Luyện tập quá mức còn gây ra mất ngủ do lượng Adrenaline trong cơ thể tăng cao quá mức \n Luyện tập Cario quá chậm thì lượng Calo sẽ bị đốt ít hơn, BMR không tăng cao và sức bèn, tốc độ của cơ thể không cải thiện nhiều cũng như hạn chế loãng xương không hiệu quả bằng"
+        },
+        {
+          "question": "Ưu điểm của Cardio là gì ?",
+          "answer" :"Tiết kiệm thời gian \n Có thể tập luyện ở mọi nơi \n Luyện tập Cardio ở mức độ nhanh đốt nhiều Calo hơn \n Làm tăng hệ số BMR, giúp đốt năng lượng liên tục trong ngày và giảm mỡ nhanh hơn \n Tăng sức bền, tốc độ cho cơ thể và hỗ trợ phát triển khung xương chắc chắn hơn, hạn chế bệnh loãng xương khi lớn tuổi."
+        },
+        {
+          "question": "Tôi nên tập Cardio bao nhiêu buổi 1 tuần ?",
+          "answer" :"Đối với Cardio cường độ thấp: bạn có thể tập hàng ngày hoặc 5-6 buổi 1 tuần \n Đối với Cardio cường độ cao: bạn không nên tập quá 3 buổi trên 1 tuần và bạn nên tập cách ngày."
+        },
+        {
+          "question": "Tập Yoga có giảm cân không?",
+          "answer": "Tập Yoga với các tư thế phù hợp sẽ giúp người tập giải quyết được tình trạng mỡ thừa (vd: tư thế hổ mang, tư thế hình cánh cung, tư thế chiếc thuyền…)"
+        }
+      ],
+      "yoga": [
+        {
+          "question": "Yoga là gì ?",
+          "answer" :"Yoga là 1 có nguồn gốc từ Ấn Độ khoảng 5000 năm trước. Người ta thường cho rằng tập yoga là tập những động tác uốn éo kì lạ. Nhưng thật ra yoga bao gồm các bài tập cải thiện thể chất, tinh thần, tình cảm và cả tâm linh của người tập"
+        },
+        {
+          "question": "Tập yoga cần những gì ?",
+          "answer" :"Thảm tập \n Quần áo thoải mái \n Chân trần"
+        },
+        {
+          "question": "Lợi ích khi tập Yoga",
+          "answer" :"Tinh thần sảng khoái \n Cải thiện vóc dáng \n Nâng cao sức khỏe \n Giữ gìn sắc đẹp \n Cải thiện đời sống tình dục"
+        },
+        {
+          "question": "Có thể tập yoga bao nhiêu lần 1 tuần?",
+          "answer" :"Tốt nhất là 3-5 ngày/ 1 tuần, mỗi lần tập từ 30p-1 tiếng \n Thời gian tập tốt nhất: sang sớm, tối muộn" 
+        },
+        {
+          "question": "Can I practice Yoga to lose weight?",
+          "answer" :"Practicing yoga with proper posture will help the practitioner deal with fat loss (ex: cobra pose, bow pose, full boat pose..)"
+        }
+      ]
+    }
+  }
+}

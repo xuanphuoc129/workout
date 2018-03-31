@@ -1,0 +1,177 @@
+page-workout-play {
+  $pieSize: 100px; 
+  $circle: 120px;
+  @media (min-height: 660px){
+    .container{
+      height: 100%;
+      .middle-container{
+        height: 50%;
+        padding: 1.4rem;
+        .timer{
+          margin-top: 2rem;
+          font-size: 8rem !important;
+        }
+        .circle{
+          font-size: 12rem !important;
+          height: $circle * 1.4 !important; 
+          width: $circle * 1.4 !important; 
+        }
+      }
+      .top-container{
+        height: 20%;
+      }
+    }
+  }
+  @media (min-height: 730px){
+    .container{
+      .middle-container{
+        .animation{
+          .cardio{
+            font-size: 12rem !important;
+          }
+        }
+      }
+      .total-container .box .row{
+        padding: 1.4rem 0 !important;
+      }
+      .button-container{
+        margin:  2rem 0 !important;
+        .btn-bottom{
+          padding: 2.6rem 3.4rem !important;
+        }
+      }
+
+    }
+  }
+  .container {
+    width: 100%;
+    padding:1.6rem;
+    $square-size: 80px;
+    .top-container {
+      height: 10%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      .square {
+        padding: 1.6rem;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: column;
+        background: linear-gradient(to bottom, #344673, #2F3966, rgba($color: #2B305D, $alpha: 0));
+        border-radius: 20px;
+        .small-font {
+          color: rgba($color: white, $alpha: .4);
+        }
+        .number {
+          font-size: 2rem;
+          color: white;
+          .blue {
+            color: map-get($map: $appColors, $key: blue);
+          }
+        }
+      }
+      .type-text {
+        text-transform: uppercase;
+        font-size: 1.8rem;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        color: map-get($map: $appColors, $key: green);
+        &.cardio {
+          color: map-get($map: $appColors, $key: tabata);
+        }
+        &.yoga{
+          color: map-get($map: $appColors, $key: yoga);
+        }
+        &.rest {
+          color: #EF456A;
+        }
+      }
+    }
+    .middle-container {
+      text-align: center;
+      // padding: 1.6rem;
+      .animation {
+        text-align: center;
+        .circle {
+          height: $circle * 1.2;
+          width: $circle * 1.2;
+          background: rgba($color: white, $alpha: .1);
+          color: map-get($map: $appColors, $key: tabata);
+          margin: auto;
+          font-size: 10rem;
+        }
+        .cardio {
+          background: rgba($color: white, $alpha: .1);
+          font-size: 10rem;
+          color: map-get($map: $appColors, $key: tabata);
+          border-radius: 40px;
+          padding: 1rem 0;
+          max-width: 90%;
+          margin: auto;
+        }
+        .yoga{
+          color: map-get($map: $appColors, $key: yoga);
+        }
+      }
+      .timer {
+        color: white;
+        &.cardio{
+          font-size: 7rem;
+        }
+        &.yoga{
+          font-size: 6rem;
+        }
+      }
+    }
+    .total-container {
+      width: 100%;
+      background: linear-gradient(to bottom, #344673, #2F3966, #344673);
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      // padding: .6rem; // height: 20%;
+      margin: 1.2rem 0;
+      .box {
+        width: calc(100% - 1.6rem);
+        .row{
+          padding: .6rem 0;
+        }
+      }
+      .line {
+        height: 1px;
+        width: 100%;
+        background: map-get($map: $appColors, $key: blue);
+        opacity: .2;
+        margin: .4rem 0;
+      }
+      .title {
+        color: white;
+        font-size: map-get($map: $appSizes, $key: normal);
+      }
+      .time-container {
+        display: flex;
+        .icon {
+          color: white;
+        }
+        .text {
+          margin-left: .4rem;
+          color: rgba($color: white, $alpha: .4);
+          &.color {
+            color: map-get($map: $appColors, $key: blue);
+          }
+        }
+      }
+    }
+    .button-container {
+      text-align: center;
+      margin: 1.2rem 0;
+      .btn-bottom {
+        padding: 1.8rem 2rem;
+      }
+    }
+  }
+}

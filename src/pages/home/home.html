@@ -1,0 +1,140 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons left style="opacity: 0">
+      <button ion-button icon-only>
+        <ion-icon name="workout-icon-setting"></ion-icon>
+      </button>
+    </ion-buttons>
+    <div text-center tappable (click)="translate(2)">
+      <div class="today">
+        <span>{{language.title}}</span>
+      </div>
+      <div class="date" *ngIf="user.language == 2">{{today | date : 'MMM d,yyyy'}}</div>
+      <div class="date" *ngIf="user.language == 1">{{today | date : 'd-MM-yyyy'}}</div>
+    </div>
+    <ion-buttons right>
+      <button ion-button icon-only (click)="goToSetting()">
+        <ion-icon name="workout-icon-setting"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="app-content">
+  <div class="padding-content a-relative">
+    <div class="top">
+      <!-- day of week -->
+      <div class="day-of-week flex">
+        <div class="day" *ngFor="let item of dayofweeks">
+          <span>{{item}}</span>
+        </div>
+      </div>
+      <!-- day in month -->
+      <ion-slides #month [initialSlide]="2" (ionSlidePrevStart)="change(1)" (ionSlideNextStart)="change(1)">
+        <ion-slide *ngFor="let calendar of calendars">
+          <div class="day-in-month row">
+            <div class="day small-font" *ngFor="let item of calendar.days" (click)="selectDay(item)">
+              <div class="circle margin-auto" [class.selected]="item && item.id == selectedDay.id && item.id!=todayString" [class.yellow]="item && item.id==todayString"
+                [class.green]="item && item.isWorkout && item.id!=todayString">
+                <span *ngIf="item">{{item.dayNumber}}</span>
+              </div>
+            </div>
+          </div>
+        </ion-slide>
+      </ion-slides>
+      <!-- note -->
+      <ion-row justify-content-center>
+        <ion-col col-5 class="flex justify-content-center align-items-center">
+          <div class="circle small yellow"></div>
+          <div class="small-font color-white">{{language.today}}</div>
+        </ion-col>
+        <ion-col col-5 class="flex justify-content-center align-items-center">
+          <div class="circle small green"></div>
+          <div class="small-font color-white">{{language.checkday}}</div>
+        </ion-col>
+      </ion-row>
+      <!-- bar -->
+      <div class="animate-bar">
+        <div class="bar-container">
+          <div class="bar  small-font" [class.selected]="monthSelected == 0" (click)="translate(0)">
+            <span>{{language.monthago}}</span>
+          </div>
+          <div class="bar small-font" [class.selected]="monthSelected == 1" (click)="translate(1)">
+            <span>{{language.lastmonth}}</span>
+          </div>
+          <div class="bar small-font" [class.selected]="monthSelected == 2" (click)="translate(2)">{{language.thismonth}}</div>
+          <div class="bar animate" id="monthAnimate"></div>
+        </div>
+      </div>
+    </div>
+    <div class="bottom">
+      <div class="exercise-container">
+        <!-- exercise -->
+        <div padding text-center *ngIf="!selectedDay.isWorkout" class="color-white">{{language.null}}</div>
+        <ion-slides [initialSlide]="slides.length-1" *ngIf="slides.length > 0" #exercise (ionSlidePrevStart)="change(2)" (ionSlideNextStart)="change(2)">
+          <ion-slide *ngFor="let slide of slides">
+            <div class="exercise-box" *ngFor="let item of slide.exercise">
+              <ion-row>
+                <ion-col col-2 *ngIf="item.level == 0">
+                  <div class="a3-container-center circle big">
+                    <ion-icon [name]="item.icon"></ion-icon>
+                  </div>
+                </ion-col>
+                <ion-col col-2 *ngIf="item.level == 1">
+                  <div class="a3-container-center circle yellow big">
+                    <ion-icon name="workout-icon-star"></ion-icon>
+                  </div>
+                </ion-col>
+                <ion-col col-2 *ngIf="item.level == 2">
+                  <div class="a3-container-center circle yellow big">
+                    <ion-icon name="workout-icon-star"></ion-icon>
+                    <ion-icon name="workout-icon-star"></ion-icon>
+                  </div>
+                </ion-col>
+                <ion-col col-2 *ngIf="item.level == 3">
+                  <div class="a3-container-center circle yellow big">
+                    <div text-center>
+                      <ion-icon name="workout-icon-star"></ion-icon>
+                      <div class="flex">
+                        <ion-icon name="workout-icon-star"></ion-icon>
+                        <ion-icon name="workout-icon-star"></ion-icon>
+                      </div>
+                    </div>
+                  </div>
+                </ion-col>
+                <ion-col col-6 text-left>
+                  <div class="color-white normal-font">{{item.name}}</div>
+                  <div class="color-gray small-font">{{item.getTotalExercise()}} {{language.set}} - {{item.timer.reps}} {{language.reps}}</div>
+                </ion-col>
+                <ion-col>
+                  <div class="flex normal-font">
+                    <div class="normal-font color-white">
+                      <ion-icon name="workout-icon-time"></ion-icon>
+                    </div>
+                    <div class="normal-font color-gray text-time">
+                      <span>{{item.getTotalTimeString()}}</span>
+                    </div>
+                  </div>
+                </ion-col>
+              </ion-row>
+            </div>
+          </ion-slide>
+        </ion-slides>
+        <!-- bar -->
+        <div class="animate-bar flex justify-content-center">
+          <div class="bar-container">
+            <div class="bar small-font" *ngFor="let item of slides;let i = index" (click)="translateAnimateBar(i)"></div>
+            <div class="bar animate" id="homeBar"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="btn-container">
+        <button class="btn-bottom" (click)="goToNewExercise()" ion-button> {{language.readyworkout}} </button>
+      </div>
+
+  </div>
+</ion-content>
+<ion-footer>
+  
+</ion-footer>

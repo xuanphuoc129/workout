@@ -1,0 +1,115 @@
+<!--
+  Generated template for the SetTimePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+
+<ion-content padding>
+  <!-- header -->
+  <div style="height: 30px"></div>
+  <div class="background-linear">
+    <span>{{exercise_name}}</span>
+    <button ion-button icon-only class="color-blue" (click)="showPromt()">
+      <ion-icon name="workout-icon-edit"></ion-icon>
+    </button>
+  </div>
+  <!-- scroll-container -->
+  <div class="scroll-container">
+    <!-- work -->
+    <div class="scroll-box border-bottom border-radius-left-right-top flex align-items-center">
+      <div class="time-label">{{language.work}}</div>
+      <div class="scroll-items">
+        <div class="scroll-col" id="scroll1">
+          <div class="scroll-item"></div>
+          <div class="scroll-item" *ngFor="let number of numbers" [class.selected]="number == middleNumber[0]">
+            <span *ngIf="number < 10">0</span>{{number}}</div>
+          <div class="scroll-item"></div>
+        </div>
+        <div class="scroll-col" margin-left id="scroll2">
+          <div class="scroll-item"></div>
+          <div class="scroll-item" *ngFor="let number of numbers" [class.selected]="number == middleNumber[1]">
+            <span *ngIf="number < 10">0</span>{{number}}</div>
+          <div class="scroll-item"></div>
+        </div>
+        <div class="bg larger"></div>
+      </div>
+    </div>
+    <!-- rest -->
+    <div class="scroll-box border-bottom flex align-items-center">
+      <div class="time-label">{{language.rest}}</div>
+      <div class="scroll-items">
+        <div class="scroll-col" id="scroll3">
+          <div class="scroll-item"></div>
+          <div class="scroll-item" *ngFor="let number of numbers" [class.selected]="number == middleNumber[2]">
+            <span *ngIf="number < 10">0</span>{{number}}</div>
+          <div class="scroll-item"></div>
+        </div>
+        <div class="scroll-col" margin-left id="scroll4">
+          <div class="scroll-item"></div>
+          <div class="scroll-item" *ngFor="let number of numbers" [class.selected]="number == middleNumber[3]">
+            <span *ngIf="number < 10">0</span>{{number}}</div>
+          <div class="scroll-item"></div>
+        </div>
+        <div class="bg larger"></div>
+      </div>
+    </div>
+    <!-- reps -->
+    <div class="scroll-box border-bottom flex align-items-center">
+      <div class="time-label">{{language.reps}}</div>
+      <div class="scroll-items">
+        <div class="scroll-col" id="scroll5">
+          <div class="scroll-item"></div>
+          <div class="scroll-item" *ngFor="let number of numbersReps" [class.selected]="number == middleNumber[4]">
+            <span *ngIf="number < 10">0</span>{{number}}</div>
+          <div class="scroll-item"></div>
+        </div>
+        <div class="bg small"></div>
+      </div>
+    </div>
+    <!-- break -->
+    <div class="scroll-box border-bottom flex align-items-center">
+      <div class="time-label">{{language.break}}</div>
+      <div class="scroll-items">
+        <div class="scroll-col" id="scroll6">
+          <div class="scroll-item"></div>
+          <div class="scroll-item " *ngFor="let number of numbers" [class.selected]="number == middleNumber[5]">
+            <span *ngIf="number < 10">0</span>{{number}}</div>
+          <div class="scroll-item"></div>
+        </div>
+        <div class="scroll-col" margin-left id="scroll7">
+          <div class="scroll-item"></div>
+          <div class="scroll-item" *ngFor="let number of numbers" [class.selected]="number == middleNumber[6]">
+            <span *ngIf="number < 10">0</span>{{number}}</div>
+          <div class="scroll-item"></div>
+        </div>
+        <div class="bg larger"></div>
+      </div>
+    </div>
+     <!-- delay -->
+     <div class="scroll-box border-radius-left-right-bottom flex align-items-center">
+        <div class="time-label">{{language.delay}}</div>
+        <div class="scroll-items">
+          <div class="scroll-col" id="scroll8">
+            <div class="scroll-item"></div>
+            <div class="scroll-item " *ngFor="let number of numbers" [class.selected]="number == middleNumber[7]">
+              <span *ngIf="number < 10">0</span>{{number}}</div>
+            <div class="scroll-item"></div>
+          </div>
+          <div class="scroll-col" margin-left id="scroll9">
+            <div class="scroll-item"></div>
+            <div class="scroll-item" *ngFor="let number of numbers" [class.selected]="number == middleNumber[8]">
+              <span *ngIf="number < 10">0</span>{{number}}</div>
+            <div class="scroll-item"></div>
+          </div>
+          <div class="bg larger"></div>
+        </div>
+      </div>
+  </div>
+  <!-- button -->
+
+  <div class="button-container">
+    <button ion-button class="btn-bottom" (click)="closeView()"> {{language.accept}} </button>
+  </div>
+</ion-content>

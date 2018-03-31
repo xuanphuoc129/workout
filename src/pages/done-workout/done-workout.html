@@ -1,0 +1,74 @@
+<!--
+  Generated template for the DoneWorkoutPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-toolbar>
+    <ion-title text-center>{{title}}</ion-title>
+  </ion-toolbar>
+
+</ion-header>
+
+
+<ion-content class="app-content">
+
+  <div class="done-content">
+    <!-- kcal burned -->
+    <div class="total-calories" text-center>
+      <div class="text normal-font color-white">
+        <span>{{language.caloburned}}</span>
+      </div>
+      <div text-center class="flex justify-content-center align-items-center">
+        <div class="icon color-white">
+          <ion-icon name="workout-icon-calories"></ion-icon>
+        </div>
+        <div class="number" margin-left>{{calories}}kcal</div>
+      </div>
+    </div>
+
+    <!-- total time -->
+    <div class="total-container">
+      <!-- row-1 -->
+      <div class="flex justify-content-between border-bottom padding">
+        <div class="text-label color-white normal-font">
+          <span>{{language.totaltime}}</span>
+        </div>
+        <div class="flex align-items-center">
+          <div class="icon color-white">
+            <ion-icon name="workout-icon-time"></ion-icon>
+          </div>
+          <div class="color-gray">
+            <span>{{time}}</span>
+          </div>
+        </div>
+      </div>
+      <!-- row-2 -->
+      <div class="flex justify-content-between border-bottom padding">
+        <div class="text-label color-white normal-font">
+          <span>{{language.totalwork}}</span>
+        </div>
+        <div class="color-gray">
+          <span>{{work}}</span>
+        </div>
+      </div>
+      <!-- row-3-->
+      <div class="flex justify-content-between padding">
+        <div class="text-label color-white normal-font">
+          <span>{{language.circle}}</span>
+        </div>
+        <div class="color-gray">
+          <span>{{circle}}</span>
+        </div>
+      </div>
+    </div>
+
+    <div text-center padding margin-top>
+      <button ion-button class="btn-bottom" (click)="backToHome()">{{language.backtohome}}</button>
+    </div>
+  </div>
+
+</ion-content>
+

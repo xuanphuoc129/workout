@@ -1,0 +1,108 @@
+page-setting {
+  .container {
+    // padding-left: 1.6rem;
+    .title {
+      color: #828AA5;
+      font-size: 1.4rem;
+    }
+    .content-container {
+      margin: 1rem 0;
+      padding: 0 1.6rem;
+      background: linear-gradient(to bottom, #344673, #2F3966, #344673);
+      border-radius: 10px;
+      .name {
+        color: white;
+        font-size: 1.6rem;
+        margin-left: 16px;
+      }
+      .icon {
+        &.blue {
+          color: map-get($map: $appColors, $key: blue);
+        }
+        &.green {
+          color: map-get($map: $appColors, $key: green);
+        }
+      }
+      .connect {
+        color: rgba($color: white, $alpha: .4);
+        font-size: 1.4rem;
+      }
+      .top {
+        padding: 1rem 0;
+      }
+      $circle-sizes: 20px;
+      .circle-background {
+        height: $circle-sizes;
+        width: $circle-sizes;
+        border-radius: 50%;
+        background: white;
+        &.facebook {
+          color: rgb(75, 124, 223);
+          font-size: 1.6em;
+        }
+        &.google {
+          color: rgb(221, 75, 57);
+          font-size: 1.6em;
+        }
+      }
+      .line {
+        height: 1px;
+        background: rgba($color: map-get($map: $appColors, $key: blue), $alpha: .2);
+        width: 100%;
+      }
+      .bottom {
+        padding: 1rem 0;
+        color: map-get($map: $appColors, $key: blue);
+      }
+      .toggle-container {
+        display: flex;
+        background: rgba($color: black, $alpha: .2);
+        color: #828AA5;
+        border-radius: 20px;
+        position: relative;
+        padding: 1rem 0;
+        .on {
+          text-align: center;
+          width: 50%;
+          z-index: 10;
+          padding: 0 1rem;
+          &.selected {
+            color: white;
+          }
+        }
+        .off {
+          text-align: center;
+          width: 50%;
+          padding: 0 1rem;
+          z-index: 10;
+          &.selected {
+            color: white;
+          }
+        }
+        .bg {
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 50%;
+          height: 100%;
+          border-radius: 20px;
+          background: rgba($color: white, $alpha: .1);
+          border: 1px solid map-get($map: $appColors, $key: blue);
+          box-shadow: 0 3px 6px rgba($color: #00E3FF, $alpha: .16);
+          transition: 200ms;
+          z-index: 1;
+        }
+      }
+    }
+  }
+  .footer-md::before,
+  .tabs-md[tabsPlacement="bottom"]>.tabbar::before {
+    height: 0 !important;
+  }
+  .blue {
+    color: map-get($map: $appColors, $key: blue);
+  }
+  .bmi {
+    line-height: 1.8em;
+  }
+}

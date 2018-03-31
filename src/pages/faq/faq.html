@@ -1,0 +1,57 @@
+<!--
+  Generated template for the FaqPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-toolbar>
+    <ion-buttons left>
+      <button icon-only ion-button navPop>
+        <ion-icon name="workout-icon-back"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title text-center>FAQ</ion-title>
+    <ion-buttons right>
+      <button icon-only ion-button style="opacity: 0">
+        <ion-icon name="workout-icon-"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+  <div class="tab-container" *ngIf="tabbars.length > 0">
+    <div class="tab-item " *ngFor="let item of tabbars; let i = index" (click)="selectTab(i)" [class.selected]="selectedIndex == i"
+      tappable>
+      <div class="icon-container a3-container-center">
+        <ion-icon name="{{item.icon}}" [style.color]="item.color"></ion-icon>
+      </div>
+      <div class="name">{{item.name}}</div>
+    </div>
+  </div>
+</ion-header>
+
+
+<ion-content>
+  <div *ngIf="selectedIndex == 2" class="coming-soon a3-container-center">
+    <div class="icon">
+      <ion-icon name="workout-icon-fitness"></ion-icon>
+    </div>
+    <div class="description color-white" text-center>
+      <span>Coming soon</span>
+    </div>
+  </div>
+
+  <div *ngIf="selectedIndex < 2" class="faq-content">
+    <div class="according-container" *ngFor="let item of items;let i = index">
+      <div class="accordion" id="{{item.id}}">
+        <div class="question">{{item.question}}</div>
+        <button ion-button icon-only class="btn-arrow" [class.up]="item.isOpen" (click)="openAccording(item)">
+          <ion-icon name="workout-icon-arrow-up"></ion-icon>
+        </button>
+      </div>
+      <div class="panel">
+        <p>{{item.answer}}</p>
+      </div>
+    </div>
+  </div>
+</ion-content>

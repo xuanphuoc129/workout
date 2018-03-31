@@ -1,0 +1,93 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons left>
+      <button ion-button icon-only navPop>
+        <ion-icon name="workout-icon-back"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title text-center>{{language.title}}</ion-title>
+    <ion-buttons right>
+      <button ion-button icon-only (click)="goToFAQ()">
+        <ion-icon name="workout-icon-faq"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+  <!-- tabbar -->
+  <div class="tabbar-top">
+    <div class="block-item selected" *ngFor="let item of items; let i = index" (click)="selectTab(i)" [class.selected]="i==tabIndex"
+      tappable>
+      <div class="circle a3-container-center">
+        <ion-icon [name]="item.icon" [style.color]="item.color"></ion-icon>
+      </div>
+      <div class="name">{{item.name}}</div>
+    </div>
+  </div>
+</ion-header>
+
+<ion-content>
+  <!-- <div class="padding-content"> -->
+    <!-- coming soon -->
+  <div *ngIf="tabIndex == 2" class="coming-soon a3-container-center">
+    <div class="icon">
+      <ion-icon name="workout-icon-fitness"></ion-icon>
+    </div>
+    <div class="description color-white" text-center><span>Coming soon</span></div>
+  </div>
+    <!-- exercise -->
+    <div class="box-container"  *ngIf="tabIndex < 2">
+      <ion-slides (ionSlidePrevStart)="change()" (ionSlideNextStart)="change()">
+        <ion-slide *ngFor="let slide of slides">
+          <div class="exercise-box" *ngFor="let item of slide.slide; let i = index" [class.selected]="i==selectedExercise">
+            <!-- top -->
+            <ion-row align-items-center>
+              <ion-col col-2>
+                <div class="a3-container-center circle " [class.cardio]="tabIndex == 0" [class.yoga]="tabIndex == 1">
+                  <ion-icon *ngIf="item.stickman.length == 0" name="workout-icon-star"></ion-icon>
+                  <ion-icon *ngIf="item.stickman" name="{{item.stickman[0]}}"></ion-icon>
+                </div>
+              </ion-col>
+              <ion-col col-7 class="flex align-items-center">
+                <div class="color-white normal-font name-exercise text-title" [class.selected]="item.isCheck">{{item.name}}</div>
+                <!-- <div class="color-gray small-font">2 set - 8 reps</div> -->
+              </ion-col>
+              <ion-col col-2 (click)="selecteExercise(item)" tappable>
+                <div class="circle tiny a3-container-center float-right" [class.checkmark]="item.isCheck" [class.no-checkmark]="!item.isCheck">
+                  <ion-icon *ngIf="item.isCheck" name="workout-icon-tick-2"></ion-icon>
+                </div>
+              </ion-col>
+            </ion-row>
+          </div>
+        </ion-slide>
+      </ion-slides>
+      <!-- slide bar -->
+      <div class="bar-bottom">
+        <div margin-top margin-bottom text-center class="normal-font">
+          <span class="blue-color">{{numberSelected}} {{language.select}} </span>
+          <span class="color-gray"> / 30</span>
+        </div>
+        <!-- bar -->
+        <div class="animate-bar">
+          <div class="bar-container">
+            <div class="bar" (click)="translate(0)"></div>
+            <div class="bar" (click)="translate(1)"></div>
+            <div class="bar" (click)="translate(2)"></div>
+            <div class="bar" (click)="translate(3)"></div>
+            <div class="bar" (click)="translate(4)"></div>
+            <div class="bar" (click)="translate(5)"></div>
+            <div class="bar animate" id="animateBar1"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="btn-container flex align-items-center justify-content-center">
+        <button margin-right ion-button icon-only round class="btn-toolbar btn-bottom" (click)="unCheckAll()">
+          <ion-icon name="workout-icon-delete"></ion-icon>
+        </button>
+        <button *ngIf="numberSelected > 1" ion-button class="btn-bottom w-60" (click)="createExercise()"> {{language.create}} </button>
+        <button margin-left ion-button icon-only round class="btn-toolbar btn-bottom" (click)="goToSetTime()">
+          <ion-icon name="workout-icon-setup"></ion-icon>
+        </button>
+      </div>
+    </div>
+  <!-- </div> -->
+</ion-content>

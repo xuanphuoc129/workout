@@ -1,0 +1,40 @@
+page-done-workout {
+    .done-content{
+        padding: 1rem;
+    }
+  .total-calories {
+    margin-top: 4vh;
+    padding: 1.6rem 0;
+    background: linear-gradient(to right, rgba($color: #354875, $alpha: 0), #354875, rgba($color: #354875, $alpha: 0));
+    .icon {
+      font-size: 1.8rem;
+      padding-top: .6rem;
+    }
+    .number {
+      color: map-get($map: $appColors, $key: green);
+      font-size: 3rem;
+      margin-top: 1rem;
+    }
+  }
+  .total-container {
+    background: linear-gradient(to bottom, #344673, #2F3966, #344673);
+    border-radius: 20px;
+    padding: 1rem;
+    margin-top: 4vh;
+    .icon{
+        margin-right: .4rem;
+    }
+    .padding{
+        padding: 1.2rem .8rem;
+    }
+  }
+  .btn-bottom{
+      width: 80%;
+      border-radius: 30px;
+      margin: auto;
+  }
+  .border-bottom{
+      border-bottom: 1px solid rgba($color: map-get($map: $appColors, $key: blue), $alpha: .2);
+  }
+  
+}
