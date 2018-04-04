@@ -190,16 +190,18 @@ export class CreateExercisePage {
     this.translate(index);
   }
   translate(number) {
+    if(number > 5)return;
     let element: HTMLElement = document.getElementById("animateBar1");
     // console.log("element",element);
     this.slideContainer.slideTo(number);
-    let classElement = document.getElementsByClassName("bar");
+
+    // let classElement = document.getElementsByClassName("bar");
     // console.log("classElement", classElement);
 
     // let animateBar = 
     if (element) {
-      console.log("element width", element.clientWidth);
-      var distance = element.clientWidth;
+      console.log("element width", element);
+      var distance = element.clientWidth + 2;
       element.style.left = distance * number + "px";
     }
   }

@@ -34,8 +34,6 @@ firebase.initializeApp(config);
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp,{
-      menuType: 'overlay',
-      iconMode: 'ios',
       pageTransition: 'ios-transition'
     }),
     IonicStorageModule.forRoot(),

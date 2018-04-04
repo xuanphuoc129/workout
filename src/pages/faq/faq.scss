@@ -35,9 +35,12 @@ page-faq {
         margin: auto;
       }
       .name {
-        font-size: map-get($map: $appSizes, $key: small);
         color: #828AA5;
         margin-top: .4rem;
+        font-size: 1.4rem;
+        &.comingsoon{
+          font-style: italic;
+        }
       }
     }
   }
@@ -60,6 +63,7 @@ page-faq {
       background: transparent;
       transform: rotate(180deg);
       transition: 200ms ease-in-out;
+      box-shadow: none;
       &.up {
         transform: rotate(0);
       }

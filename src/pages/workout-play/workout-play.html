@@ -7,7 +7,7 @@
 <ion-header>
   <ion-toolbar>
     <ion-buttons left>
-      <button icon-only ion-button navPop>
+      <button icon-only ion-button (click)="closeBack()">
         <ion-icon name="workout-icon-back"></ion-icon>
       </button>
     </ion-buttons>
@@ -52,7 +52,7 @@
           <ion-icon name="workout-icon-freetime"></ion-icon>
         </div>
       </div>
-      <div class="timer" [class.cardio]= "exercise.type==1" [class.yoga]="exercise.type ==2">{{workout.timing}}</div>
+      <div class="timer font-myridpro" [class.cardio]= "exercise.type==1" [class.yoga]="exercise.type ==2">{{workout.timing}}</div>
     </div>
 
     <!-- summary -->

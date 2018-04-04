@@ -50,6 +50,7 @@ export class WorkOut extends Time {
     setExercise(exercise: Exercises) {
         this.exercise = exercise;
         if (this.exercise.exerciseList.length > 0 && this.exercise.exerciseList[0].stickman.length > 0) this.icons = this.exercise.exerciseList[0].stickman;
+        
         if (this.exercise.exerciseList.length > 0) this.text = this.exercise.exerciseList[this.setDone].name;
     }
     getTimeNowString(): string {
@@ -61,6 +62,7 @@ export class WorkOut extends Time {
     runBreak() {
         this.callback(2);
         this.setDone = 0;
+        if (this.exercise.exerciseList[this.setDone].stickman.length > 0) this.icons = this.exercise.exerciseList[this.setDone].stickman;
         this.setTiming(this.break);
         this.type = 1;
         this.text = "Break";
@@ -133,7 +135,6 @@ export class WorkOut extends Time {
                 }
             }
             this.timing--;
-            this.callback(1);
             if (this.type > -1) this.time_now++;
         }, 1000);
     }

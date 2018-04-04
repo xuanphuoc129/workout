@@ -37,7 +37,7 @@
             </div>
           </ion-col>
           <ion-col col-5>
-            <div class="name" margin-left>
+            <div class="name" >
               <span>Facebook</span>
             </div>
           </ion-col>
@@ -57,7 +57,7 @@
             </div>
           </ion-col>
           <ion-col col-5>
-            <div class="name" margin-left>
+            <div class="name" >
               <span>Google</span>
             </div>
           </ion-col>
@@ -117,7 +117,7 @@
               <span>{{language.vibration}}</span>
             </div>
           </ion-col>
-          <ion-col col-5 offset-1>
+          <ion-col class="on-off xs-5 sm-4" offset-1>
             <div class="toggle-container">
               <div class="on" [class.selected]="!isVibration" tappable (click)="changeVibration()">
                 <span>{{language.off}}</span>
@@ -141,7 +141,7 @@
               <span>{{language.alarm}}</span>
             </div>
           </ion-col>
-          <ion-col col-5 offset-1>
+          <ion-col text-right offset-1>
             <div class="toggle-container">
               <div class="on" [class.selected]="!isAlarm" tappable (click)="changeIsAlarm()">
                 <span>{{language.off}}</span>
@@ -165,7 +165,7 @@
               <span>{{language.sound}}</span>
             </div>
           </ion-col>
-          <ion-col col-5 offset-1>
+          <ion-col class="on-off xs-5 sm-4" offset-1>
             <div class="toggle-container">
               <div class="on" [class.selected]="!isSound" tappable (click)="changeIsSound()">
                 <span>{{language.off}}</span>
@@ -196,7 +196,7 @@
               <span>{{language.height}}</span>
             </div>
           </ion-col>
-          <ion-col col-5 offset-1 text-right>
+          <ion-col col-5 offset-1 text-right class="normal-font">
             <span class="blue">{{user.physic.height}}</span>
             <span class="color-gray"> cm</span>
           </ion-col>
@@ -213,7 +213,7 @@
               <span>{{language.weight}}</span>
             </div>
           </ion-col>
-          <ion-col col-5 offset-1 text-right>
+          <ion-col col-5 offset-1 text-right class="normal-font">
             <span class="blue">{{user.physic.weight}}</span>
             <span class="color-gray"> kg</span>
           </ion-col>

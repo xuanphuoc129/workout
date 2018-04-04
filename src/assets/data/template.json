@@ -5,7 +5,7 @@
         "name": "Jumping Jack",
         "icon": "workout-icon-cardio",
         "color": "#35EBBB",
-        "stickman": ["workout-icon-c_1a", "workout-icon-c_1b"],
+        "stickman": ["workout-icon-c_1b", "workout-icon-c_1a"],
         "type": 1
       },
       {
@@ -13,7 +13,7 @@
         "name": "Leg Raise",
         "icon": "workout-icon-cardio",
         "color": "#35EBBB",
-        "stickman": ["workout-icon-c_2a", "workout-icon-c_2b"],
+        "stickman": ["workout-icon-c_2b", "workout-icon-c_2a"],
         "type": 1
       },
       {
@@ -37,7 +37,7 @@
         "name": "Jumping lunges",
         "icon": "workout-icon-cardio",
         "color": "#35EBBB",
-        "stickman": ["workout-icon-c_5a","workout-icon-c_5b"],
+        "stickman": ["workout-icon-c_5b","workout-icon-c_5a"],
         "type": 1
       },
       {
@@ -93,7 +93,7 @@
         "name": "Glute kickback",
         "icon": "workout-icon-cardio",
         "color": "#35EBBB",
-        "stickman": "",
+        "stickman": ["workout-icon-c_12a", "workout-icon-c_12b"],
         "type": 1
       },
       {
@@ -165,7 +165,7 @@
         "name": "drop jump",
         "icon": "workout-icon-cardio",
         "color": "#35EBBB",
-        "stickman": "",
+        "stickman": ["workout-icon-c_21a", "workout-icon-c_22b"],
         "type": 1
       },
       {
@@ -173,7 +173,7 @@
         "name": "Squat Jump",
         "icon": "workout-icon-cardio",
         "color": "#35EBBB",
-        "stickman": "",
+        "stickman": ["workout-icon-c_23a", "workout-icon-c_24b"],
         "type": 1
       },
       {
@@ -189,12 +189,12 @@
         "name": "sumo squat",
         "icon": "workout-icon-cardio",
         "color": "#35EBBB",
-        "stickman": "",
+        "stickman": ["workout-icon-c_24a", "workout-icon-c_24b"],
         "type": 1
       },
       {
         "id": "cd25",
-        "name": "split lunge jumps",
+        "name": "Lunge ngược đá chân",
         "icon": "workout-icon-cardio",
         "color": "#35EBBB",
         "stickman": ["workout-icon-c_25a", "workout-icon-c_25b"],
@@ -202,10 +202,10 @@
       },
       {
         "id": "cd26",
-        "name": "squat jump 180 deg",
+        "name": "Duỗi 2 chân",
         "icon": "workout-icon-cardio",
         "color": "#35EBBB",
-        "stickman": "",
+        "stickman": ["workout-icon-c_26a", "workout-icon-c_26b"],
         "type": 1
       },
       {
@@ -213,7 +213,7 @@
         "name": "hít đất xoay người",
         "icon": "workout-icon-cardio",
         "color": "#35EBBB",
-        "stickman": "",
+        "stickman": ["workout-icon-c_27a", "workout-icon-c_27b"],
         "type": 1
       },
       {
@@ -221,7 +221,7 @@
         "name": "gate swings",
         "icon": "workout-icon-cardio",
         "color": "#35EBBB",
-        "stickman": "",
+        "stickman": ["workout-icon-c_28a", "workout-icon-c_28b"],
         "type": 1
       },
       {
@@ -229,7 +229,7 @@
         "name": "pilates scissors",
         "icon": "workout-icon-cardio",
         "color": "#35EBBB",
-        "stickman": "",
+        "stickman": ["workout-icon-c_29a", "workout-icon-c_29b"],
         "type": 1
       },
       {
@@ -237,7 +237,7 @@
         "name": "breakdancer kick",
         "icon": "workout-icon-cardio",
         "color": "#35EBBB",
-        "stickman": "",
+        "stickman": ["workout-icon-c_30a", "workout-icon-c_30b"],
         "type": 1
       }
     ],
@@ -342,7 +342,7 @@
         "name": "Cobra Pose",
         "icon": "workout-icon-yoga",
         "color": "#FFD65A",
-        "stickman": "",
+        "stickman": ["workout-icon-y_13"],
         "type": 1
       },
       {
@@ -591,7 +591,7 @@
         "monthago": "2 months ago",
         "lastmonth": "Last month",
         "thismonth": "This month",
-        "null": "Null",
+        "null": "You did not workout",
         "readyworkout": "Ready Workout",
         "set": "Set",
         "reps": "Reps"
@@ -648,10 +648,13 @@
         "reps": "Reps",
         "total": "Total time",
         "timenow": "Time now",
-        "start": "Start"
+        "start": "Start",
+        "message": "Do you want stop workout?",
+        "cancel": "No",
+        "ok": "Yes"
       },
       "done": {
-        "caloburned": "Total Kcal",
+        "caloburned": "Total Kcal burned :",
         "totaltime": "Total time",
         "totalwork": "Total work",
         "circle": "Circle",
@@ -735,7 +738,10 @@
         "reps": "Lặp",
         "total": "Tổng thời gian",
         "timenow": "Thời gian đã tập",
-        "start": "Bắt đầu"
+        "start": "Bắt đầu",
+        "message": "Bạn muốn dừng tập ?",
+        "cancel": "Không",
+        "ok": "Có"
       },
       "done": {
         "caloburned": "Tổng lượng calo đã tiêu hao",

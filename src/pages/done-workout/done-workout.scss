@@ -14,6 +14,7 @@ page-done-workout {
       color: map-get($map: $appColors, $key: green);
       font-size: 3rem;
       margin-top: 1rem;
+      margin-left: 1rem;
     }
   }
   .total-container {
@@ -25,7 +26,7 @@ page-done-workout {
         margin-right: .4rem;
     }
     .padding{
-        padding: 1.2rem .8rem;
+        padding: 1.2rem 1.6rem;
     }
   }
   .btn-bottom{

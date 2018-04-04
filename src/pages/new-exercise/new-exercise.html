@@ -19,7 +19,7 @@
       <div class="circle a3-container-center">
         <ion-icon [name]="item.icon" [style.color]="item.color"></ion-icon>
       </div>
-      <div class="name ">{{item.name}}</div>
+      <div class="name" [class.comingsoon]="i==2">{{item.name}}</div>
     </div>
   </div>
 
@@ -72,8 +72,8 @@
               <div class="color-white normal-font">{{item.name}}</div>
               <div class="color-gray small-font">{{item.getTotalExercise()}} {{language.set}} - {{item.timer.reps}} {{language.reps}}</div>
             </ion-col>
-            <ion-col>
-              <div class="flex normal-font">
+            <ion-col >
+              <div class="flex normal-font justify-content-center">
                 <div class="normal-font color-white">
                   <ion-icon name="workout-icon-time"></ion-icon>
                 </div>
@@ -88,7 +88,7 @@
     </ion-slides>
     <!-- slide bar -->
     <div class="flex align-items-center justify-content-center">
-      <div margin-top margin-bottom text-center class="small-font">
+      <div margin-top margin-bottom text-center class="normal-font">
         <span class="blue-color">{{exerciseFillter.length}}</span>
         <span class="color-gray">/15</span>
       </div>

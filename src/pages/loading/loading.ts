@@ -25,14 +25,18 @@ export class LoadingPage {
     public splashScreen: SplashScreen,
     public navCtrl: NavController, public navParams: NavParams) {
   }
-
+  
   ionViewDidLoad() {
-    this.splashScreen.hide();
     this.appController.onLoadData();
     this.loadDataSubscription = this.appController.loadedDataChanel.asObservable().subscribe((data) => {
       console.log("On load data sucess",data);
       if(this.appController.loadedData.exercise && this.appController.loadedData.diary 
         && this.appController.loadedData.dataFile && this.appController.loadedData.calendar && this.appController.loadedData.user){
+          if(this.appController.user && this.appController.user.language == 1){
+            this.appController.language = this.appController.mDataJSON.language.vn;
+          }else{
+            this.appController.language = this.appController.mDataJSON.language.es;
+          }
           this.loadDataSubscription.unsubscribe();
           this.onLoadedData();
         }
@@ -40,6 +44,7 @@ export class LoadingPage {
   }
 
   ionViewDidLeave(){
+    this.splashScreen.hide();
     this.loadDataSubscription.unsubscribe();
   }
 

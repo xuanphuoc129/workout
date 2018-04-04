@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { IonicPage, NavController, NavParams, Content } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, Content,AlertController } from 'ionic-angular';
 import { Exercises } from '../../providers/class/exercises';
 import { AppControllerProvider } from '../../providers/app-controller/app-controller';
 import { Events } from 'ionic-angular';
@@ -25,6 +25,7 @@ export class WorkoutPlayPage {
   workout: WorkOut;
 
   constructor(
+    public mAlertController : AlertController,
     private vibration: Vibration,
     public appController: AppControllerProvider,
     public navCtrl: NavController, public navParams: NavParams) {
@@ -39,10 +40,6 @@ export class WorkoutPlayPage {
     this.workout.setTiming(this.workout.work);
     this.workout.callback = (data) => {
       console.log(data);
-      if (data == 1 && this.appController.user.notification.alarm && this.appController.user.notification.sound) {
-        this.playTick();
-        return;
-      }
       if (data == -1 && this.appController.user.notification.sound) {
         this.playWork();
         return;
@@ -54,10 +51,6 @@ export class WorkoutPlayPage {
       if(data == "done"){
         this.done();
       }
-      // if (this.appController.user.notification.sound) this.appController.playAudio();
-      // if (this.workout.repsDone == this.workout.reps) {
-      //   this.done();
-      // }
     }
   }
   language: any;
@@ -70,6 +63,26 @@ export class WorkoutPlayPage {
   }
   ionViewWillLeave() {
     this.workout.stopCountTime();
+  }
+
+  
+  closeBack(){
+    this.workout.stopCountTime();
+    let alert = this.mAlertController.create({
+      message: this.language.message,
+      buttons: [
+        {
+          text: this.language.cancel
+        },
+        {
+          text: this.language.ok,
+          handler: ()=>{
+            this.navCtrl.pop();
+          }
+        }
+      ]
+    });
+    alert.present();
   }
 
   isPlay: boolean = false;
@@ -87,6 +100,7 @@ export class WorkoutPlayPage {
         this.workout.runDelay();
       } else {
         this.workout.startCountTime();
+
       }
     } else {
       this.workout.stopCountTime();

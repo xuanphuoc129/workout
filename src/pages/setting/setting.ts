@@ -83,11 +83,8 @@ export class SettingPage {
   }
 
   updateUser() {
-    this.appController.showLoading();
     this.appController.updateUser(this.user).then(() => {
-      this.appController.hideLoading();
     }).catch((err) => {
-      this.appController.hideLoading();
     })
   }
 

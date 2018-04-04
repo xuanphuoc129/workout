@@ -6,11 +6,11 @@
       </button>
     </ion-buttons>
     <div text-center tappable (click)="translate(2)">
-      <div class="today">
+      <div class="today bar-title-size font-myridpro">
         <span>{{language.title}}</span>
       </div>
-      <div class="date" *ngIf="user.language == 2">{{today | date : 'MMM d,yyyy'}}</div>
-      <div class="date" *ngIf="user.language == 1">{{today | date : 'd-MM-yyyy'}}</div>
+      <div class="date normal-font" *ngIf="user.language == 2">{{today | date : 'MMM d, yyyy'}}</div>
+      <div class="date normal-font" *ngIf="user.language == 1">{{today | date : 'dd-MM-yyyy'}}</div>
     </div>
     <ion-buttons right>
       <button ion-button icon-only (click)="goToSetting()">
@@ -31,14 +31,16 @@
       </div>
       <!-- day in month -->
       <ion-slides #month [initialSlide]="2" (ionSlidePrevStart)="change(1)" (ionSlideNextStart)="change(1)">
-        <ion-slide *ngFor="let calendar of calendars">
+        <ion-slide *ngFor="let calendar of calendars; let i = index">
           <div class="day-in-month row">
             <div class="day small-font" *ngFor="let item of calendar.days" (click)="selectDay(item)">
               <div class="circle margin-auto" [class.selected]="item && item.id == selectedDay.id && item.id!=todayString" [class.yellow]="item && item.id==todayString"
                 [class.green]="item && item.isWorkout && item.id!=todayString">
                 <span *ngIf="item">{{item.dayNumber}}</span>
+                <div *ngIf="item && item.id==todayString" class="bg"></div>
               </div>
             </div>
+            <div *ngIf="i==2" class="bg" [style.top]="top" id="bgrow"></div>
           </div>
         </ion-slide>
       </ion-slides>
@@ -107,7 +109,7 @@
                   <div class="color-gray small-font">{{item.getTotalExercise()}} {{language.set}} - {{item.timer.reps}} {{language.reps}}</div>
                 </ion-col>
                 <ion-col>
-                  <div class="flex normal-font">
+                  <div class="flex normal-font justify-content-center">
                     <div class="normal-font color-white">
                       <ion-icon name="workout-icon-time"></ion-icon>
                     </div>

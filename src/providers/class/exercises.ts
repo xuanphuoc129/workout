@@ -71,7 +71,11 @@ export class Exercises {
         
         if(data.id)this.id = data.id;
         if(data.name)this.name = data.name;
-        if(data.exerciseList)this.exerciseList = data.exerciseList;
+        if(data.exerciseList){
+            data.exerciseList.forEach(element => {
+                this.exerciseList.push(new Exercise(element));
+            });
+        }
         if(data.exerciseListIDs)this.exerciseListIDs = data.exerciseListIDs;
         if(data.timer)this.timer = new Time(data.timer);
         if(data.icon)this.icon = data.icon;

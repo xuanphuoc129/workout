@@ -56,23 +56,25 @@ export class HomePage {
       this.loadLanguage();
     })
   }
-
+  top: string = "7px";
   load3Calendars() {
     this.calendars.push(this.appController.calendar[this.today.getMonth() - 2]);
     this.calendars.push(this.appController.calendar[this.today.getMonth() - 1]);
     this.calendars.push(this.appController.calendar[this.today.getMonth()]);
-    this.calendars[2].days.forEach(day => {
+    this.calendars[2].days.forEach((day,index) => {
       if (day != null && day.id == this.todayString) {
         this.selectedDay = day;
-        // console.log(this.selectedDay);
+        this.top = Math.floor(index / 7) * 34 + 7 + "px";
         return;
       }
+
     })
     this.loadExerciseDone();
     // console.log(this.calendars);
   }
 
   selectDay(item: Day) {
+    if(!item)return;
     this.selectedDay = item;
     this.loadExerciseDone();    
     this.translateAnimateBar(0);
@@ -122,7 +124,7 @@ export class HomePage {
       this.monthSelected = number;
       let element = document.getElementById("monthAnimate");
       if (element) {
-        let distance = element.clientWidth;
+        let distance = element.clientWidth + 2;
         element.style.left = distance * number + "px";
       }
     }
@@ -132,8 +134,8 @@ export class HomePage {
       if (this.exercise) this.exercise.slideTo(number)
       let element = document.getElementById("homeBar");
       if (element) {
-        let distance = element.clientWidth;
-        element.style.left = distance * number + "px";
+        let distance = element.clientWidth + 2;
+        element.style.left = (distance * number) + "px";
       }
     }
 

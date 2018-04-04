@@ -24,7 +24,6 @@ export class NewExercisePage {
   items: Array<Items> = [];
   isLoading: boolean = true;
   exerciseFillter: Array<Exercises> = [];
-  pages: Array<any> = [];
   slides: Array<{ id: number, exerciseFillter: Array<Exercises> }> = [];
   exerciseSelected: Exercises;
   constructor(
@@ -34,7 +33,6 @@ export class NewExercisePage {
     this.loadLanguage();
     this.items = [];
     this.loadItems();
-    this.loadPages();
     this.onLoadData();
   }
   language : any;
@@ -44,13 +42,6 @@ export class NewExercisePage {
 
   goToFAQ(){
     this.navCtrl.push("FaqPage");
-  }
-
-
-  loadPages() {
-    this.pages.push(1);
-    this.pages.push(1);
-    this.pages.push(1);
   }
   onLoadData() {
     this.exerciseFillter = [];
@@ -112,7 +103,7 @@ export class NewExercisePage {
     let element: HTMLElement = document.getElementById("animateBar");
     this.slide.slideTo(number);
     if (element) {
-      var distance = element.clientWidth;
+      var distance = element.clientWidth + 2;
       element.style.left = distance * number + "px";
     }
   }
@@ -135,7 +126,6 @@ export class NewExercisePage {
           text: this.language.delete,
           handler: ()=>{
             this.appController.showLoading();
-            
             this.appController.deleteExercise(this.exerciseSelected).then((sucess)=>{
               this.onLoadData();
               this.slide.slideTo(this.slides.length -1);

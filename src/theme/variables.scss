@@ -55,7 +55,7 @@ $appColors : (
 );
 
 $appSizes : (
-  bar-button : 1.2rem,
+  bar-button : 1.4rem,
   bar-title: 2rem,
   normal: 1.6rem,
   small: 1.2rem,
@@ -107,3 +107,20 @@ $appSizes : (
 
 @import "roboto";
 @import "noto-sans";
+@font-face {
+  font-family: "Mijas-Ultra";
+  src: local("Mijas-Ultra"), local("Mijas-Ultra"), url("../assets/fonts/Mijas-Ultra.woff") format("woff2");
+}
+
+@font-face {
+  font-family: "Mijas-Pro-Italic";
+  src: local("Mijas-Pro-Italic"), local("Mijas-Pro-Italic"), url("../assets/fonts/MyriadProItalic.woff") format('woff2');
+}
+@font-face {
+  font-family: "myriadpro-semi";
+  src: local("myriadpro-semi"), local("myriadpro-semi"), url("../assets/fonts/myriadpro-semi.woff") format('woff2');
+}
+@font-face {
+  font-family: "myriadpro";
+  src: local("myriadpro"), local("myriadpro"), url("../assets/fonts/MyriadPro-Regular.woff") format('woff2');
+}

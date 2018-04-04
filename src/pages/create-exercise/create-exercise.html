@@ -19,7 +19,7 @@
       <div class="circle a3-container-center">
         <ion-icon [name]="item.icon" [style.color]="item.color"></ion-icon>
       </div>
-      <div class="name">{{item.name}}</div>
+      <div class="name" [class.comingsoon]="i==2">{{item.name}}</div>
     </div>
   </div>
 </ion-header>

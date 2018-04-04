@@ -1,4 +1,10 @@
 page-setting {
+  @media (min-height: 660px){
+      .toggle-container{
+       
+      }
+  }
+  
   .container {
     // padding-left: 1.6rem;
     .title {
@@ -13,7 +19,8 @@ page-setting {
       .name {
         color: white;
         font-size: 1.6rem;
-        margin-left: 16px;
+        margin-left: 1rem;
+        text-transform: capitalize;
       }
       .icon {
         &.blue {
@@ -38,11 +45,11 @@ page-setting {
         background: white;
         &.facebook {
           color: rgb(75, 124, 223);
-          font-size: 1.6em;
+          font-size: 1.4em;
         }
         &.google {
           color: rgb(221, 75, 57);
-          font-size: 1.6em;
+          font-size: 1.4em;
         }
       }
       .line {
@@ -60,12 +67,15 @@ page-setting {
         color: #828AA5;
         border-radius: 20px;
         position: relative;
+        max-width: 100px;
         padding: 1rem 0;
+        margin-left: auto;
         .on {
           text-align: center;
           width: 50%;
           z-index: 10;
           padding: 0 1rem;
+          font-size: map-get($map: $appSizes, $key: normal);
           &.selected {
             color: white;
           }
@@ -75,6 +85,7 @@ page-setting {
           width: 50%;
           padding: 0 1rem;
           z-index: 10;
+          font-size: map-get($map: $appSizes, $key: normal);
           &.selected {
             color: white;
           }
@@ -103,6 +114,9 @@ page-setting {
     color: map-get($map: $appColors, $key: blue);
   }
   .bmi {
-    line-height: 1.8em;
+    line-height: 2em;
+    .big-font{
+      font-size: 3rem;
+    }
   }
 }

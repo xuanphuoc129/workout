@@ -3,54 +3,80 @@ page-home {
     font-weight: unset;
   }
   .today {
-    font-size: 1.6rem;
     color: white;
   }
   .date {
     text-align: center;
     color: rgba($color: white, $alpha: .6);
-    font-size: 1.2rem;
     margin-top: .4rem;
   }
   .top {
     // max-height: 40%;
-    padding: 1rem 0;
+    padding-bottom: 1rem;
     border-bottom: 1px solid rgba($color: map-get($map: $appColors, $key: blue), $alpha: .1);
     width: 100%;
     background: transparent;
     .animate-bar {
-      margin-top: 1.6rem;
+      width: 90%;
+      margin: auto;
+      margin-top: .6rem;
     }
     .bar {
       max-height: 30px;
-      padding: .6rem 1rem;
+      padding: .6rem .2rem;
       &.animate {
-        transition: 100ms;
       }
     }
     .day-of-week {
       width: 100%;
       white-space: nowrap;
-      padding-bottom: .4rem;
+      padding: 0 1rem;
+      padding-bottom: .5rem;
       border-bottom: 1px solid rgba($color: map-get($map: $appColors, $key: blue), $alpha: .1);
       .day {
         width: 14.2857143%;
         text-align: center;
         font-size: 1.4rem;
         color: map-get($map: $appColors, $key: blue);
-        
       }
     }
     .day-in-month {
+      padding: .5rem 1rem;
+      position: relative;
+      .bg {
+        height: 30px;
+        position: absolute;
+        background: linear-gradient(to left, rgba($color: #2B3560, $alpha: 0), #354875, rgba($color: #2B3560, $alpha: 0));
+        top: 7px;
+        left: 0;
+        width: 100%;
+        z-index: -1;
+      }
       .day {
         width: 14.2857143%;
         text-align: center;
-        padding: .2rem;
         color: rgba($color: white, $alpha: .6);
-        position: relative;
-        .circle{
-          &.selected{
+        padding: 2px 0;
+        .circle {
+          position: relative;
+          &.yellow {
+            box-shadow: 0 0 6px rgba($color: #FFCC00, $alpha: .53);
+          }
+          &.selected {
             border: 1px solid map-get($map: $appColors, $key: blue);
+          }
+          .bg {
+            position: absolute;
+            z-index: -1;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            transform: translate(-50%, -50%) scale(1.1);
+            background: #FFCC00;
+            opacity: .1;
+            box-shadow: 0 0 6px rgba($color: #FFCC00, $alpha: .53);
           }
         }
       }
@@ -62,12 +88,15 @@ page-home {
     .exercise-container {
       padding-top: 1rem;
       padding-bottom: .4rem;
-      .exercise-box{
-        .circle{
-          font-size: .6rem;
+      .exercise-box {
+        max-height: 50px;
+        .circle {
+          font-size: .8rem;
           background: rgba($color: white, $alpha: .1);
           color: map-get($map: $appColors, $key: blue);
-          &.yellow{
+          position: relative;
+          margin: auto;
+          &.yellow {
             color: map-get($map: $appColors, $key: yellow);
           }
         }
@@ -75,16 +104,19 @@ page-home {
     }
     .animate-bar {
       padding: 0 5vw;
+      margin: auto;
       margin-top: 1.6rem;
       .bar-container {
-        border-radius: 20px;
+        border-radius: 20px; // width: 100%;
         .bar {
           height: 6px;
-          padding: 0;
-          width: 60px;
+          padding: 0; // width: 60px;
+          min-width: 60px;
+          width: 33.33333%;
           &.animate {
-            width: 60px;
             border-radius: 20px;
+            min-width: 60px;
+            width: 33.33333%;
             top: 0;
           }
         }
@@ -99,6 +131,9 @@ page-home {
     width: 100%;
     position: relative;
     text-align: center;
+    button {
+      width: 80%;
+    }
   }
   .text-time {
     margin-left: .6rem;

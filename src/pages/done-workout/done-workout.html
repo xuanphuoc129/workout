@@ -25,7 +25,7 @@
         <div class="icon color-white">
           <ion-icon name="workout-icon-calories"></ion-icon>
         </div>
-        <div class="number" margin-left>{{calories}}kcal</div>
+        <div class="number">{{calories}} kcal</div>
       </div>
     </div>
 
@@ -65,10 +65,12 @@
       </div>
     </div>
 
-    <div text-center padding margin-top>
-      <button ion-button class="btn-bottom" (click)="backToHome()">{{language.backtohome}}</button>
-    </div>
+
   </div>
 
 </ion-content>
-
+<ion-footer>
+  <div text-center padding-bottom>
+    <button ion-button class="btn-bottom" (click)="backToHome()">{{language.backtohome}}</button>
+  </div>
+</ion-footer>

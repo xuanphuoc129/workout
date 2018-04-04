@@ -14,6 +14,20 @@
 // automatically applied to the <body> element in the app.
 @import "./theme/workout";
 // @import "./theme/stickman";
+.font-myrid{
+  font-family: "Mijas-Ultra" !important;
+}
+.font-myrid-italic{
+  font-family: "Mijas-Pro-Italic" !important;
+}
+
+.font-myrid-semi{
+  font-family: "myriadpro-semi" !important;
+}
+
+.font-myridpro{
+  font-family: "myriadpro" !important;
+}
 
 .a3-container-center{
   display: flex;
@@ -84,14 +98,17 @@
 .bar-button {
   color: white;
   font-size: map-get($map: $appSizes, $key: bar-button);
-  &.right {
-    font-size: map-get($map: $appSizes, $key: bar-button) - .2rem !important;
-  }
 }
 
 .toolbar-title {
   color: white;
-  font-size: 1.6rem;
+  font-size: map-get($map: $appSizes, $key: bar-title);
+  font-family: "myriadpro" !important;
+  text-transform: capitalize;
+}
+
+ion-title.title{
+  padding: 0;
 }
 
 .normal-font {
@@ -114,9 +131,10 @@
   box-shadow: 0 2px 2px rgba($color: #00E3FF, $alpha: .43);
   text-transform: uppercase;
   font-weight: unset;
-  border-radius: 30px;
-  font-size: 1.8rem;
-  padding: 1em 1.2em;
+  border-radius: 27px;
+  font-size: 2rem;
+  padding: .8em 1.2em;
+  font-family: "myriadpro" !important;
   height: unset;
 }
 
@@ -205,7 +223,7 @@
       color: white;
     }
     &.animate {
-      width: 33.8%;
+      width: 33.333333333%;
       height: 100%;
       position: absolute;
       background: rgba($color: white, $alpha: .1);
