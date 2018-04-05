@@ -31,11 +31,11 @@
     <div class="icon">
       <ion-icon name="workout-icon-fitness"></ion-icon>
     </div>
-    <div class="description color-white" text-center><span>Coming soon</span></div>
+    <div class="description color-white" text-center><span>{{language.comingsoon}}</span></div>
   </div>
     <!-- exercise -->
     <div class="box-container"  *ngIf="tabIndex < 2">
-      <ion-slides (ionSlidePrevStart)="change()" (ionSlideNextStart)="change()">
+      <ion-slides [spaceBetween]="16" (ionSlidePrevStart)="change()" (ionSlideNextStart)="change()">
         <ion-slide *ngFor="let slide of slides">
           <div class="exercise-box" *ngFor="let item of slide.slide; let i = index" [class.selected]="i==selectedExercise">
             <!-- top -->
@@ -83,7 +83,7 @@
         <button margin-right ion-button icon-only round class="btn-toolbar btn-bottom" (click)="unCheckAll()">
           <ion-icon name="workout-icon-delete"></ion-icon>
         </button>
-        <button *ngIf="numberSelected > 1" ion-button class="btn-bottom w-60" (click)="createExercise()"> {{language.create}} </button>
+        <button [class.disable]="numberSelected < 2" ion-button class="btn-bottom w-60" (click)="createExercise()"> {{language.create}} </button>
         <button margin-left ion-button icon-only round class="btn-toolbar btn-bottom" (click)="goToSetTime()">
           <ion-icon name="workout-icon-setup"></ion-icon>
         </button>

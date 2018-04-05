@@ -14,6 +14,15 @@
 // automatically applied to the <body> element in the app.
 @import "./theme/workout";
 // @import "./theme/stickman";
+.hidden{
+  display: none;
+  opacity: 0;
+}
+.toolbar{
+  &.toolbar-ios{
+    padding-top: 2rem; 
+  }
+} 
 .font-myrid{
   font-family: "Mijas-Ultra" !important;
 }
@@ -134,8 +143,10 @@ ion-title.title{
   border-radius: 27px;
   font-size: 2rem;
   padding: .8em 1.2em;
-  font-family: "myriadpro" !important;
+  // font-family: "myriadpro" !important;
   height: unset;
+  font-family: "myriadpro-semi" !important;
+  
 }
 
 .time-container {
@@ -290,11 +301,12 @@ $circle: 30px;
   width: 100%;
   flex-flow: column;
   .icon{
-    font-size: 3em;
+    font-size: 2.6em;
     color: map-get($map: $appColors, $key: blue);
   }
   .description{
-    font-size: map-get($map: $appSizes, $key: big);
+    font-size: map-get($map: $appSizes, $key: normal);
+    white-space: pre-wrap;
   }
 
 }

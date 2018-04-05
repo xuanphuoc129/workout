@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { IonicPage, NavController, NavParams, ModalController, Slides } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ModalController, Slides, ViewController } from 'ionic-angular';
 import { AppControllerProvider } from '../../providers/app-controller/app-controller';
 import { ScrollItems, ScrollOption } from '../../providers/scroll-controller';
 import { Exercises, Exercise, Time } from '../../providers/class/exercises';
@@ -34,6 +34,7 @@ export class CreateExercisePage {
   time: Time;
   newExercise: Exercises;
   constructor(
+    public mViewController: ViewController,
     public modal: ModalController,
     public appController: AppControllerProvider,
     public navCtrl: NavController, public navParams: NavParams) {
@@ -49,7 +50,7 @@ export class CreateExercisePage {
     }
   }
 
-  goToFAQ(){
+  goToFAQ() {
     this.navCtrl.push("FaqPage");
   }
 
@@ -131,6 +132,7 @@ export class CreateExercisePage {
   createExercise() {
     // this.appController.showLoading();
     // console.log("create exericse");
+    if(this.numberSelected < 2)return;
     let today = new Date();
     this.newExercise.id = "#edit" + today.getTime();
     this.newExercise.type = this.tabIndex + 1;
@@ -153,11 +155,11 @@ export class CreateExercisePage {
         this.appController.addExercisesToStorage(this.newExercise).then(() => {
           // this.appController.hideLoading();
           this.appController.showToast(this.language.createsucess);
-          this.navCtrl.pop();
+          this.mViewController.dismiss(this.newExercise);
         }).catch(err => { });
       }
     } else {
-      let modal = this.modal.create("SetTimePage", {time: this.time, name: this.name});
+      let modal = this.modal.create("SetTimePage", { time: this.time, name: this.name });
       modal.present();
       modal.onDidDismiss(data => {
         // this.appController.hideLoading();
@@ -176,7 +178,7 @@ export class CreateExercisePage {
           this.appController.addExercisesToStorage(this.newExercise).then(() => {
             // this.appController.hideLoading();
             this.appController.showToast(this.language.createsucess);
-            this.navCtrl.pop();
+            this.mViewController.dismiss(this.newExercise);
           }).catch(err => { });
         }
       })
@@ -190,7 +192,7 @@ export class CreateExercisePage {
     this.translate(index);
   }
   translate(number) {
-    if(number > 5)return;
+    if (number > 5) return;
     let element: HTMLElement = document.getElementById("animateBar1");
     // console.log("element",element);
     this.slideContainer.slideTo(number);

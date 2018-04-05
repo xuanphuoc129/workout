@@ -45,6 +45,7 @@ export class AppControllerProvider {
   // exerciseDoneCollection: Map<string, Exercises> = new Map<string, Exercises>();/
 
   mDataJSON: any;
+  isIOS:boolean = false;
   loadDataSubscription: Subscription;
 
   scrollController: ScrollController;
@@ -119,13 +120,17 @@ export class AppControllerProvider {
         deleteTitle: "Delete Exercise",
         question: "Are you want to delete this exercise",
         cancel: "Cancel",
-        delete: "Delete"
+        delete: "Delete",
+        comingsoon: "Coming soon"
+        
       },
       createexercise: {
         title: "Create Exercise",
         select: "Selected",
         create: "Create",
-        createsucess: "Create exercise sucess"
+        createsucess: "Create exercise sucess",
+        comingsoon: "Coming soon"
+        
       },
       settime: {
         title: "Exercise Name",
@@ -162,7 +167,8 @@ export class AppControllerProvider {
         googlesucess: "Login google sucess",
         googlefail: "Login google fail, Can't connect to serve",
         googleerror: "Can't login google",
-        connected: "Connected"
+        connected: "Connected",
+        comingsoon: "Coming soon"
       }
     }
   }

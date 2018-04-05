@@ -1,50 +1,49 @@
 page-workout-play {
-  $pieSize: 100px; 
+  $pieSize: 100px;
   $circle: 120px;
-  @media (min-height: 660px){
-    .container{
+  @media (min-height: 660px) {
+    .container {
       height: 100%;
-      .middle-container{
+      .middle-container {
         height: 50%;
         padding: 1.4rem;
-        .circle{
+        .circle {
           font-size: 12rem !important;
-          height: $circle * 1.4 !important; 
-          width: $circle * 1.4 !important; 
+          height: $circle * 1.4 !important;
+          width: $circle * 1.4 !important;
         }
-        .timer{
-          padding-top: 1.6rem; 
+        .timer {
+          padding-top: 1.6rem;
         }
       }
-      .top-container{
+      .top-container {
         height: 20%;
       }
     }
   }
-  @media (min-height: 730px){
-    .container{
-      .middle-container{
-        .animation{
-          .cardio{
+  @media (min-height: 730px) {
+    .container {
+      .middle-container {
+        .animation {
+          .cardio {
             font-size: 12rem !important;
           }
         }
-        .timer{
+        .timer {
           margin-top: 2rem;
         }
       }
-      .total-container .box .row{
+      .total-container .box .row {
         padding: 1.4rem 0 !important;
       }
-      .button-container{
-        margin:  2rem 0 !important;
-        
+      .button-container {
+        margin: 2rem 0 !important;
       }
     }
   }
   .container {
     width: 100%;
-    padding:1.6rem;
+    padding: 1.6rem;
     $square-size: 80px;
     .top-container {
       height: 10%;
@@ -83,7 +82,7 @@ page-workout-play {
         &.cardio {
           color: map-get($map: $appColors, $key: tabata);
         }
-        &.yoga{
+        &.yoga {
           color: map-get($map: $appColors, $key: yoga);
         }
         &.rest {
@@ -92,8 +91,7 @@ page-workout-play {
       }
     }
     .middle-container {
-      text-align: center;
-      // padding: 1.6rem;
+      text-align: center; // padding: 1.6rem;
       .animation {
         text-align: center;
         .circle {
@@ -103,6 +101,12 @@ page-workout-play {
           color: map-get($map: $appColors, $key: tabata);
           margin: auto;
           font-size: 10rem;
+          &.freetime {
+            color: white;
+          }
+          &.rest {
+            color: #EF456A;
+          }
         }
         .cardio {
           background: rgba($color: white, $alpha: .1);
@@ -112,20 +116,20 @@ page-workout-play {
           padding: 1rem 0;
           max-width: 90%;
           margin: auto;
+          &.freetime {
+            color: white;
+          }
+          &.rest {
+            color: #EF456A;
+          }
         }
-        .yoga{
+        .yoga {
           color: map-get($map: $appColors, $key: yoga);
         }
       }
       .timer {
         color: white;
         font-size: 9rem;
-        // &.cardio{
-        //   font-size: 7rem;
-        // }
-        // &.yoga{
-        //   font-size: 6rem;
-        // }
       }
     }
     .total-container {
@@ -134,12 +138,11 @@ page-workout-play {
       border-radius: 20px;
       display: flex;
       align-items: center;
-      justify-content: center;
-      // padding: .6rem; // height: 20%;
+      justify-content: center; // padding: .6rem; // height: 20%;
       margin: 1.2rem 0;
       .box {
         width: calc(100% - 1.6rem);
-        .row{
+        .row {
           padding: .8rem 0;
         }
       }
@@ -174,6 +177,8 @@ page-workout-play {
       margin: 1.8rem 0;
       .btn-bottom {
         padding: 1.4rem;
+        width: 60%;
+        margin: auto;
       }
     }
   }

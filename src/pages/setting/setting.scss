@@ -1,10 +1,7 @@
 page-setting {
-  @media (min-height: 660px){
-      .toggle-container{
-       
-      }
+  @media (min-height: 660px) {
+    .toggle-container {}
   }
-  
   .container {
     // padding-left: 1.6rem;
     .title {
@@ -21,6 +18,8 @@ page-setting {
         font-size: 1.6rem;
         margin-left: 1rem;
         text-transform: capitalize;
+        font-family: "myriadpro" !important;
+        font-weight: bold;
       }
       .icon {
         &.blue {
@@ -115,7 +114,7 @@ page-setting {
   }
   .bmi {
     line-height: 2em;
-    .big-font{
+    .big-font {
       font-size: 3rem;
     }
   }

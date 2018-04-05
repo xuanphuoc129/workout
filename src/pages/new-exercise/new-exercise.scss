@@ -7,7 +7,6 @@ page-new-exercise {
   ion-content.content {
     background: #232F4F;
   }
-  
   .toolbar-background {
     background: #2D3E66 !important;
   }
@@ -34,6 +33,9 @@ page-new-exercise {
       border-top-left-radius: 10px;
       border-top-right-radius: 10px;
       color: rgba($color: white, $alpha: .6); // background: #2D3E66;
+      &.comingsoon{
+        background: rgba($color: #232F4F, $alpha: .4);
+      }
       .circle {
         height: 40px;
         width: 40px;
@@ -43,7 +45,7 @@ page-new-exercise {
       .name {
         margin-top: .3rem;
         font-size: 1.4rem;
-        &.comingsoon{
+        &.comingsoon {
           font-style: italic;
         }
       }
@@ -71,16 +73,32 @@ page-new-exercise {
   .box-container {
     // height: 100%;
     // overflow: scroll;
-    background: #232F4F;
     padding: 1rem; // border-top: 2px solid rgba($color: map-get($map: $appColors, $key: blue), $alpha: .2);
-    // border-bottom: 2px solid rgba($color: map-get($map: $appColors, $key: blue), $alpha: .2);
+    background: #232F4F; // border-bottom: 2px solid rgba($color: map-get($map: $appColors, $key: blue), $alpha: .2);
     .swiper-slide {
       display: block;
     }
     .exercise-box {
       min-height: 70px;
+      position: relative;
       &.selected {
         border: 1px solid map-get($map: $appColors, $key: blue);
+      }
+      &.new-box{
+        background: rgba($color: #1CD3FF, $alpha: .23);
+      }
+      .new-item{
+        background-color: red;
+        color: white;
+        padding: .3rem 1rem;
+        border-radius: 10px;
+        font-size: 1rem;
+        position: absolute;
+        right: -1rem;
+        top: .6rem;
+      }
+      .set-reps{
+        margin-top: .4rem;
       }
       .circle {
         height: 40px;

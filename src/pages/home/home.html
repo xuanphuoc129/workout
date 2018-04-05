@@ -73,7 +73,7 @@
       <div class="exercise-container">
         <!-- exercise -->
         <div padding text-center *ngIf="!selectedDay.isWorkout" class="color-white">{{language.null}}</div>
-        <ion-slides [initialSlide]="slides.length-1" *ngIf="slides.length > 0" #exercise (ionSlidePrevStart)="change(2)" (ionSlideNextStart)="change(2)">
+        <ion-slides [spaceBetween]="16" [initialSlide]="slides.length-1" *ngIf="slides.length > 0" #exercise (ionSlidePrevStart)="change(2)" (ionSlideNextStart)="change(2)">
           <ion-slide *ngFor="let slide of slides">
             <div class="exercise-box" *ngFor="let item of slide.exercise">
               <ion-row>
@@ -123,7 +123,7 @@
           </ion-slide>
         </ion-slides>
         <!-- bar -->
-        <div class="animate-bar flex justify-content-center">
+        <div class="animate-bar flex justify-content-center" [class.hidden]="slides.length < 2">
           <div class="bar-container">
             <div class="bar small-font" *ngFor="let item of slides;let i = index" (click)="translateAnimateBar(i)"></div>
             <div class="bar animate" id="homeBar"></div>

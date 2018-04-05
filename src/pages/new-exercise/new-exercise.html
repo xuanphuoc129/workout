@@ -14,7 +14,7 @@
   </ion-toolbar>
   <!-- tabbar -->
   <div class="tabbar-top">
-    <div class="block-item selected" *ngFor="let item of items; let i = index" (click)="selectTab(i)" [class.selected]="i==tabIndex"
+    <div class="block-item selected" *ngFor="let item of items; let i = index" (click)="selectTab(i)" [class.comingsoon]="i==2 && tabIndex !=2 " [class.selected]="i==tabIndex"
       tappable>
       <div class="circle a3-container-center">
         <ion-icon [name]="item.icon" [style.color]="item.color"></ion-icon>
@@ -31,14 +31,15 @@
     <div class="icon">
       <ion-icon name="workout-icon-fitness"></ion-icon>
     </div>
-    <div class="description color-white" text-center><span>Coming soon</span></div>
+    <div class="description color-white" text-center><span>{{language.comingsoon}}</span></div>
   </div>
   <!-- exercise -->
+  
   <div class="box-container" *ngIf="tabIndex < 2">
-    <ion-slides (ionSlidePrevStart)="change()" (ionSlideNextStart)="change()">
+    <ion-slides [spaceBetween]="16" (ionSlidePrevStart)="change()" (ionSlideNextStart)="change()">
       <ion-slide *ngFor="let slide of slides">
-        <div class="exercise-box" *ngFor="let item of slide.exerciseFillter ; let i = index" [class.selected]="item.id==exerciseSelected.id"
-          (click)="selectExercise(item)">
+        <div class="exercise-box" [@flyInOut]="{value: 'in', params: {delay: i % itemsPerLoad * animationDelayPerItem}}" *ngFor="let item of slide.exerciseFillter ; let i = index" [class.selected]="item.id==exerciseSelected.id"
+          (click)="selectExercise(item)" [class.new-box]="item.isNew">
           <!-- top -->
           <ion-row>
             <ion-col col-2 *ngIf="!item.level">
@@ -69,8 +70,8 @@
               </div>
             </ion-col>
             <ion-col col-6 text-left>
-              <div class="color-white normal-font">{{item.name}}</div>
-              <div class="color-gray small-font">{{item.getTotalExercise()}} {{language.set}} - {{item.timer.reps}} {{language.reps}}</div>
+              <div class="color-white normal-font">{{item.name}} <span class="new-item" *ngIf="item.isNew">new</span></div>
+              <div class="color-gray small-font set-reps">{{item.getTotalExercise()}} {{language.set}} - {{item.timer.reps}} {{language.reps}}</div>
             </ion-col>
             <ion-col >
               <div class="flex normal-font justify-content-center">
@@ -93,7 +94,7 @@
         <span class="color-gray">/15</span>
       </div>
       <!-- bar -->
-      <div margin-left class="animate-bar">
+      <div margin-left class="animate-bar" [class.hidden]="slides.length < 2">
         <div class="bar-container">
           <div class="bar" *ngFor="let item of slides;let i = index" (click)="translate(i)"></div>
           <div class="bar animate" id="animateBar"></div>

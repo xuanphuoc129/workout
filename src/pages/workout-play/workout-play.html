@@ -48,11 +48,11 @@
           [class.cardio]="exercise.type==1" [class.yoga]="exercise.type ==2">
           <ion-icon *ngFor="let icon of workout.icons" [name]="icon"></ion-icon>
         </div>
-        <div class="a3-container-center " *ngIf="workout.type !=0 || workout.icons.length==0" [class.circle]="exercise.type==2" [class.cardio]="exercise.type==1">
+        <div class="a3-container-center" [class.freetime]="type != 1" [class.rest]="type==1" *ngIf="workout.type !=0 || workout.icons.length==0" [class.circle]="exercise.type==2" [class.cardio]="exercise.type==1">
           <ion-icon name="workout-icon-freetime"></ion-icon>
         </div>
       </div>
-      <div class="timer font-myridpro" [class.cardio]= "exercise.type==1" [class.yoga]="exercise.type ==2">{{workout.timing}}</div>
+      <div class="timer font-myrid-semi" [class.cardio]= "exercise.type==1" [class.yoga]="exercise.type ==2">{{workout.timing}}</div>
     </div>
 
     <!-- summary -->

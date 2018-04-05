@@ -151,6 +151,10 @@ page-create-exercise {
     text-align: center;
     width: 100%;
     padding: 1.2rem 0;
+    transition: 200ms;
+    .disable{
+      filter: brightness(70%);
+    }
     .arrow-up {
       top: -60px;
       left: 50%;

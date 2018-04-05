@@ -23,12 +23,13 @@ export class FaqPage {
     this.tabbars = [];
     this.loadTabbar();
     this.loadItems();
-
+    this.comingsoon = "Coming soon";
   }
-
+  comingsoon: string = "Coming soon";
   ionViewDidLoad() {
     console.log('ionViewDidLoad FaqPage');
     this.loadTabbar();
+    this.comingsoon = this.appController.language.appcontroller.comingsoon;
   }
 
   loadTabbar() {

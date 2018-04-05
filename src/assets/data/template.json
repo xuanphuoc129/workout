@@ -623,13 +623,15 @@
         "cancel": "Cancel",
         "delete": "Delete",
         "set": "Set",
-        "reps": "Reps"
+        "reps": "Reps",
+        "comingsoon": "Function is Developt \n It's will be completed soon"
       },
       "createexercise": {
         "title": "Create Exercise",
         "select": "Selected",
         "create": "Create",
-        "createsucess": "Create exercise sucess"
+        "createsucess": "Create exercise sucess",
+        "comingsoon": "Function is Developt \n It's will be completed soon"
       },
       "settime": {
         "title": "Exercise Name",
@@ -669,7 +671,8 @@
         "googlesucess": "Login google sucess",
         "googlefail": "Login google fail, Can't connect to serve",
         "googleerror": "Can't login google",
-        "connected": "Connected"
+        "connected": "Connected",
+        "comingsoon": "Function is Developt \n It's will be completed soon"
       }
     },
     "vn": {
@@ -713,13 +716,15 @@
         "cancel": "Huỷ",
         "delete": "Xoá",
         "set": "Động tác",
-        "reps": "Lặp"
+        "reps": "Lặp",
+        "comingsoon": "Chức năng đang được phát triển \n Chúng tôi sẽ hoàn thành nó sớm nhất"
       },
       "createexercise": {
         "title": "Tạo bài tập",
         "select": "Đã chọn",
         "create": "Tạo bài tập",
-        "createsucess": "Tạo bài tập thành công"
+        "createsucess": "Tạo bài tập thành công",
+        "comingsoon": "Chức năng đang được phát triển \n Chúng tôi sẽ hoàn thành nó sớm nhất"
       },
       "settime": {
         "title": "Tên bài tập",
@@ -759,7 +764,8 @@
         "googlesucess": "Đăng nhập google thành công",
         "googlefail": "Đăng nhập google thất bại, Không thể kết nối máy chủ",
         "googleerror": "Không thể đăng nhập google",
-        "connected": "Đã kết nối"
+        "connected": "Đã kết nối",
+        "comingsoon": "Chức năng đang được phát triển \n Chúng tôi sẽ hoàn thành nó sớm nhất"
       }
     }
   },
