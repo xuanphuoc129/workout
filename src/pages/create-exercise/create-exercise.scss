@@ -6,7 +6,7 @@ page-create-exercise {
   // }
   @media (min-height: 730px) {
     .exercise-box {
-      min-height: 82px !important;
+      min-height: 76px !important;
     }
   }
   ion-content.content {
@@ -158,7 +158,7 @@ page-create-exercise {
     padding: 1.2rem 0;
     transition: 200ms;
     .disable{
-      filter: brightness(70%);
+      filter: opacity(.4);
     }
     .arrow-up {
       top: -60px;

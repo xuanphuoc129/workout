@@ -84,6 +84,10 @@ export class Users{
         }
     }
 
+    getBaseOnMBI(): number{
+        return this.mbi_rray[this.getPositionMBI()]+ 0.1;
+    }
+
     getMBIString() : string{
         var index = this.getPositionMBI();
         return this.mbi_string[index];

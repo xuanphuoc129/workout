@@ -6,7 +6,7 @@ page-new-exercise {
   // }
   @media (min-height: 730px) {
     .exercise-box {
-      min-height: 86px !important;
+      min-height: 76px !important;
     }
     
   }
@@ -36,8 +36,8 @@ page-new-exercise {
       text-align: center;
       min-width: 33.333333333%;
       padding: 1rem 0;
-      border-top-left-radius: 10px;
-      border-top-right-radius: 10px;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
       color: rgba($color: white, $alpha: .6); // background: #2D3E66;
       &.comingsoon {
         background: rgba($color: #232F4F, $alpha: .4);
@@ -91,7 +91,7 @@ page-new-exercise {
         border: 1px solid map-get($map: $appColors, $key: blue);
       }
       &.new-box {
-        background: rgba($color: #1CD3FF, $alpha: .23);
+        // background: rgba($color: #1CD3FF, $alpha: .23);
       }
       .new-item {
         background-color: red;

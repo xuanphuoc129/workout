@@ -3,6 +3,7 @@ import { IonicPage, NavController, ModalController, NavParams, Slides, AlertCont
 import { AppControllerProvider } from '../../providers/app-controller/app-controller';
 import { trigger, state, style, animate, transition } from '@angular/animations';
 import { Exercises } from '../../providers/class/exercises';
+import 'web-animations-js/web-animations.min';
 /**
  * Generated class for the NewExercisePage page.
  *
@@ -19,12 +20,12 @@ export interface Items {
   selector: 'page-new-exercise',
   templateUrl: 'new-exercise.html',
   animations: [
-    trigger('flyInOut', [
+    trigger('fadeInOut', [
       state('in',
-        style({ opacity: '1' })
+        style({ transform: 'translateX(0)' })
         , { params: { delay: 0 } }),
       transition('void => *', [
-        style({ opacity: '0' }),
+        style({ transform: 'translateX(-100%)' }),
         animate('300ms {{delay}}ms ease-out')
       ]),
     ])
@@ -47,7 +48,6 @@ export class NewExercisePage {
     this.loadLanguage();
     this.items = [];
     this.loadItems();
-    this.onLoadData();
   }
   language: any;
   loadLanguage() {
@@ -99,6 +99,7 @@ export class NewExercisePage {
     })
   }
   ionViewDidEnter() {
+    this.onLoadData();
   }
 
   goToCreateExercise() {
@@ -139,7 +140,6 @@ export class NewExercisePage {
     if(this.tabIndex == i)return;
     this.tabIndex = i;
     this.onLoadData();
-    
   }
 
   translate(number) {

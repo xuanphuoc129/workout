@@ -38,7 +38,7 @@
   <div class="box-container" *ngIf="tabIndex < 2">
     <ion-slides [spaceBetween]="16" (ionSlidePrevStart)="change()" (ionSlideNextStart)="change()">
       <ion-slide *ngFor="let slide of slides">
-        <div class="exercise-box" [@flyInOut]="{value: 'in', params: {delay: i % itemsPerLoad * animationDelayPerItem}}" *ngFor="let item of slide.exerciseFillter ; let i = index" [class.selected]="item.id==exerciseSelected.id"
+        <div class="exercise-box" [@fadeInOut]="{value: 'in', params: {delay: i % itemsPerLoad * animationDelayPerItem}}" *ngFor="let item of slide.exerciseFillter ; let i = index" [class.selected]="item.id==exerciseSelected.id"
           (click)="selectExercise(item)" [class.new-box]="item.isNew">
           <!-- top -->
           <ion-row>

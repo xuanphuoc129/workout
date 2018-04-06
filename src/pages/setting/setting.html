@@ -222,10 +222,10 @@
       <div class="line"></div>
       <div class="top bmi">
         <div class="normal-font color-white">{{language.bmi}}</div>
-        <div class="blue big-font" text-center>{{user.getMBI()}}</div>
-        <div class="normal-font color-white" text-center>{{user.getComment()}}</div>
+        <div class="blue big-font" text-center margin-top>{{user.getMBI()}}</div>
+        <div class="normal-font color-white" margin-top text-center>{{user.getComment()}}</div>
         <div class="color-white small-font" text-center>({{user.getMBIString()}})</div>
-        <div class="color-gray normal-font" text-center>{{language.advice}} {{user.getKGUP()}} kg</div>        
+        <div class="color-gray small-font" text-center>{{language.advice}} {{user.getBaseOnMBI()}} {{user.getKGUP()}} kg</div>        
       </div>
     </div>
   </div>

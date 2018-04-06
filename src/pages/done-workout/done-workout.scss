@@ -1,6 +1,13 @@
 page-done-workout {
+    .toolbar-ios ion-title{
+        position: relative;
+    }
     .done-content{
         padding: 1rem;
+        .animated{
+            animation-delay: 0;
+            animation-duration: 500ms;
+        }
     }
   .total-calories {
     margin-top: 4vh;
