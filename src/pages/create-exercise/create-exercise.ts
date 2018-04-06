@@ -144,7 +144,7 @@ export class CreateExercisePage {
     }
     this.newExercise.icon = "workout-icon-edit";
     // this.appController.showLoading();
-    if (this.isSetup) {
+    if (this.isSetup == true) {
       if (this.time && this.name) {
         this.newExercise.timer = this.time;
         this.newExercise.name = this.name;

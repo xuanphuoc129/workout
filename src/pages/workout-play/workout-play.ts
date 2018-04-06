@@ -89,18 +89,12 @@ export class WorkoutPlayPage {
   timeout: any;
   timerInter: any;
   playAndPause() {
-    if (!this.workout.isRunning && this.workout.timing == 0) {
-      this.workout.reset();
-      this.workout.setTiming(this.workout.work);
-      return;
-    }
     this.workout.isRunning = !this.workout.isRunning;
     if (this.workout.isRunning) {
       if (this.workout.type == 0) {
         this.workout.runDelay();
       } else {
         this.workout.startCountTime();
-
       }
     } else {
       this.workout.stopCountTime();

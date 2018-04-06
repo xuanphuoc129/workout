@@ -1,5 +1,16 @@
 page-home {
-  @media (min-width: 360px) {}
+  @media (min-height: 730px) {
+    .exercise-box{
+      min-height: 66px;
+    }
+  }
+  
+  @media (max-height: 667px) {
+    .exercise-box{
+      max-height: 50px;
+    }
+  }
+
   @keyframes bounce {
     0%{
       transform:translate(-50%, -50%) scale(1);
@@ -37,7 +48,7 @@ page-home {
     background: transparent;
     .animate-bar {
       width: 90%;
-      max-width: 270px;
+      max-width: 300px;
       margin: auto;
       margin-top: .6rem;
     }
@@ -109,7 +120,7 @@ page-home {
       padding-top: 1rem;
       padding-bottom: .4rem;
       .exercise-box {
-        max-height: 50px;
+        // max-height: 50px;
         .circle {
           font-size: .8rem;
           background: rgba($color: white, $alpha: .1);

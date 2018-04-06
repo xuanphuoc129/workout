@@ -23,14 +23,14 @@
 </ion-header>
 
 
-<ion-content class="app-content" padding>
+<ion-content class="app-content" padding no-bounce>
   <div class="container">
     <div class="title">
       <span>{{language.connect}}</span>
     </div>
     <div class="content-container">
       <div class="top">
-        <ion-row>
+        <ion-row align-items-center>
           <ion-col col-1>
             <div class="circle-background facebook a3-container-center">
               <ion-icon name="workout-icon-facebook"></ion-icon>
@@ -50,7 +50,7 @@
       </div>
       <div class="line"></div>
       <div class="bottom">
-        <ion-row (click)="loginGoogle()" tappable>
+        <ion-row align-items-center (click)="loginGoogle()" tappable>
           <ion-col col-1>
             <div class="circle-background google a3-container-center">
               <ion-icon name="workout-icon-google"></ion-icon>
@@ -76,7 +76,7 @@
     </div>
     <div class="content-container">
       <div class="top">
-        <ion-row (click)="changeIsVn(2)" tappable>
+        <ion-row align-items-center (click)="changeIsVn(2)" tappable>
           <ion-col class="icon green" col-1>
             <ion-icon *ngIf="user.language == 2" name="workout-icon-tick-1"></ion-icon>
           </ion-col>
@@ -89,7 +89,7 @@
       </div>
       <div class="line"></div>
       <div class="bottom">
-        <ion-row (click)="changeIsVn(1)" tappable>
+        <ion-row align-items-center (click)="changeIsVn(1)" tappable>
           <ion-col class="icon green" col-1>
             <ion-icon *ngIf="user.language == 1" name="workout-icon-tick-1"></ion-icon>
           </ion-col>
@@ -224,6 +224,8 @@
         <div class="normal-font color-white">{{language.bmi}}</div>
         <div class="blue big-font" text-center>{{user.getMBI()}}</div>
         <div class="normal-font color-white" text-center>{{user.getComment()}}</div>
+        <div class="color-white small-font" text-center>({{user.getMBIString()}})</div>
+        <div class="color-gray normal-font" text-center>{{language.advice}} {{user.getKGUP()}} kg</div>        
       </div>
     </div>
   </div>

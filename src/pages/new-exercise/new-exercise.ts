@@ -1,8 +1,8 @@
 import { Component, ViewChild } from '@angular/core';
 import { IonicPage, NavController, ModalController, NavParams, Slides, AlertController } from 'ionic-angular';
 import { AppControllerProvider } from '../../providers/app-controller/app-controller';
-import { Exercises } from '../../providers/class/exercises';
 import { trigger, state, style, animate, transition } from '@angular/animations';
+import { Exercises } from '../../providers/class/exercises';
 /**
  * Generated class for the NewExercisePage page.
  *
@@ -91,7 +91,13 @@ export class NewExercisePage {
     this.items.push({ name: "Yoga", icon: "workout-icon-yoga", color: "#FFD65A" });
     this.items.push({ name: "Coming soon", icon: "workout-icon-question", color: "white" });
   }
-
+  ionViewDidLeave(){
+    this.exerciseFillter.forEach(exercise=>{
+      if(exercise["isNew"] == true){
+        exercise["isNew"] = false;
+      }
+    })
+  }
   ionViewDidEnter() {
   }
 

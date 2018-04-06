@@ -1,7 +1,7 @@
 page-workout-play {
   $pieSize: 100px;
   $circle: 120px;
-  @media (min-height: 660px) {
+  @media (min-height: 640px) {
     .container {
       height: 100%;
       .middle-container {
@@ -13,7 +13,8 @@ page-workout-play {
           width: $circle * 1.4 !important;
         }
         .timer {
-          padding-top: 1.6rem;
+          padding-top: 1.6rem !important;
+          font-size: 9rem!important;
         }
       }
       .top-container {
@@ -43,7 +44,7 @@ page-workout-play {
   }
   .container {
     width: 100%;
-    padding: 1.6rem;
+    padding: 0 1.6rem;
     $square-size: 80px;
     .top-container {
       height: 10%;
@@ -52,6 +53,8 @@ page-workout-play {
       justify-content: space-between;
       .square {
         padding: 1.6rem;
+        width: 25%;
+        max-width: 80px;
         height: 100%;
         display: flex;
         justify-content: center;
@@ -73,7 +76,7 @@ page-workout-play {
         }
       }
       .type-text {
-        text-transform: uppercase;
+        // text-transform: uppercase;
         font-size: 1.8rem;
         text-align: center;
         display: flex;
@@ -100,7 +103,7 @@ page-workout-play {
           background: rgba($color: white, $alpha: .1);
           color: map-get($map: $appColors, $key: tabata);
           margin: auto;
-          font-size: 10rem;
+          font-size: 8rem;
           &.freetime {
             color: white;
           }
@@ -129,7 +132,8 @@ page-workout-play {
       }
       .timer {
         color: white;
-        font-size: 9rem;
+        font-size: 7rem;
+        padding-top: 1rem;
       }
     }
     .total-container {

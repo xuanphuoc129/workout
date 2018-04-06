@@ -29,8 +29,8 @@ export class Users{
             sound: true
         };
         this.physic = {
-            height: 1,
-            weight: 1
+            height: 170,
+            weight: 60
         };
         this.arraycomment = this.arraycommentes;
         // this.updateUser();
@@ -62,14 +62,40 @@ export class Users{
     }
 
     getComment(): string{
-        var mbi = this.getMBI();
-        if(mbi< 18.5)return this.arraycomment[0];
-        if(mbi < 24.9 && mbi >= 18.5)return this.arraycomment[1];
-        if(mbi < 29.9 && mbi >=25)return this.arraycomment[2];
-        if(mbi < 34.9 && mbi >=30)return this.arraycomment[3];
-        if(mbi < 39.9 && mbi >=35)return this.arraycomment[4];
-        if(mbi > 40)return this.arraycomment[5];
-        return "";
+        var index = this.getPositionMBI();
+        return this.arraycomment[index];
     }
 
+    mbi_rray: Array<number> = [18.5,24.9,29.9,34.9,39.9];
+    mbi_string: Array<string> = ["0 - 18.5", "18.5 - 24.9", "25 - 29.9", "30 - 34.9", "35 - 39.9" , "40 - 99"];
+    getPositionMBI() : number{
+        var index  = -1;
+        var mbi = this.getMBI();
+        for(let i = 0; i< this.mbi_rray.length; i++){
+            if(mbi < this.mbi_rray[i]){
+                index = i;
+                break;
+            }
+        }
+        if(index > -1){
+            return index;
+        }else{
+            return 5;
+        }
+    }
+
+    getMBIString() : string{
+        var index = this.getPositionMBI();
+        return this.mbi_string[index];
+    }
+
+    getKGUP(): number{
+        var index = this.getPositionMBI();
+        if(index == 5){
+            return 9999;
+        }
+        var mbiup = this.mbi_rray[index] + 0.1;
+        var weightup = parseFloat( ((this.physic.height * this.physic.height) * mbiup / 10000).toFixed(2));
+        return weightup;
+    }
 }

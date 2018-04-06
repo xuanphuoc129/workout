@@ -194,7 +194,7 @@
       },
       {
         "id": "cd25",
-        "name": "Lunge ngược đá chân",
+        "name": "Reverse Lunge and Kick",
         "icon": "workout-icon-cardio",
         "color": "#35EBBB",
         "stickman": ["workout-icon-c_25a", "workout-icon-c_25b"],
@@ -202,7 +202,7 @@
       },
       {
         "id": "cd26",
-        "name": "Duỗi 2 chân",
+        "name": "V-crunches",
         "icon": "workout-icon-cardio",
         "color": "#35EBBB",
         "stickman": ["workout-icon-c_26a", "workout-icon-c_26b"],
@@ -210,7 +210,7 @@
       },
       {
         "id": "cd27",
-        "name": "hít đất xoay người",
+        "name": "Rotational Push-up",
         "icon": "workout-icon-cardio",
         "color": "#35EBBB",
         "stickman": ["workout-icon-c_27a", "workout-icon-c_27b"],
@@ -613,7 +613,8 @@
         "placehodlerHeight": "Input height",
         "placehodlerWeight": "Input Weight",
         "cancel": "Cancel",
-        "ok": "Save"
+        "ok": "Save",
+        "advice" : "Your maximum healthy weight based on a BMI is "
       },
       "exercise": {
         "title": "Exercise",
@@ -684,7 +685,7 @@
         "monthago": "2 tháng trước",
         "lastmonth": "Tháng trước",
         "thismonth": "Tháng này",
-        "null": "Danh sách rỗng",
+        "null": "Bạn chưa hoàn thành bài tập nào",
         "readyworkout": "Sẵn sàng tập",
         "set": "Động tác",
         "reps": "Lặp"
@@ -706,7 +707,8 @@
         "placehodlerHeight": "Nhập chiều cao của bạn",
         "placehodlerWeight": "Nhập cân nặng của bạn",
         "cancel": "Huỷ",
-        "ok": "Lưu"
+        "ok": "Lưu",
+        "advice": "Trọng lượng cơ thể tối đa của bạn dựa trên chỉ số BMI là"
       },
       "exercise": {
         "title": "Bài tập",
@@ -774,7 +776,7 @@
       "cardio": [
         {
         "question": "What is Cardio ?",
-        "answer": "Cardio (Cardiovascular) is any exercise that increases the heart rate so that the cardiovascular system is healthy, providing more oxygen to the cells in the muscles allowing the cells to burn fat faster during exercise and even when not working."
+        "answer": "Cardio (Cardiovascular) is any exercise that increases the heart rate so that the Cardiovascular system is healthy, providing more oxygen to the cells in the muscles allowing the cells to burn fat faster during exercise and even when not working."
         },
         {
         "question": "Where can I perform Cardio ?",
@@ -782,7 +784,7 @@
         },
         {
         "question": "What are the benefits of Cardio ?",
-        "answer": "Improve cardiovascular health \n Burn Calories, reduce fat \n Enhances the body's resilience \n Increases metabolism and regulates hormone levels in the body"
+        "answer": "Improve Cardiovascular health \n Burn Calories, reduce fat \n Enhances the body's resilience \n Increases metabolism and regulates hormone levels in the body"
         },
         {
         "question": "What equipment do I need for Cardio ?",
@@ -804,7 +806,7 @@
       "yoga": [
         {
           "question": "What’s Yoga ?",
-          "answer" : "It is often said that yoga is a strange bending exercise. But actually yoga includes exercises that improve the physical, mental, emotional and spiritual well-being of the practitioner"
+          "answer" : "It is often said that Yoga is a strange bending exercise. But actually Yoga includes exercises that improve the physical, mental, emotional and spiritual well-being of the practitioner"
         },
         {
           "question": "What do Yoga need ?",
@@ -858,10 +860,10 @@
       "yoga": [
         {
           "question": "Yoga là gì ?",
-          "answer" :"Yoga là 1 có nguồn gốc từ Ấn Độ khoảng 5000 năm trước. Người ta thường cho rằng tập yoga là tập những động tác uốn éo kì lạ. Nhưng thật ra yoga bao gồm các bài tập cải thiện thể chất, tinh thần, tình cảm và cả tâm linh của người tập"
+          "answer" :"Yoga là 1 có nguồn gốc từ Ấn Độ khoảng 5000 năm trước. Người ta thường cho rằng tập Yoga là tập những động tác uốn éo kì lạ. Nhưng thật ra Yoga bao gồm các bài tập cải thiện thể chất, tinh thần, tình cảm và cả tâm linh của người tập"
         },
         {
-          "question": "Tập yoga cần những gì ?",
+          "question": "Tập Yoga cần những gì ?",
           "answer" :"Thảm tập \n Quần áo thoải mái \n Chân trần"
         },
         {
@@ -869,12 +871,12 @@
           "answer" :"Tinh thần sảng khoái \n Cải thiện vóc dáng \n Nâng cao sức khỏe \n Giữ gìn sắc đẹp \n Cải thiện đời sống tình dục"
         },
         {
-          "question": "Có thể tập yoga bao nhiêu lần 1 tuần?",
+          "question": "Có thể tập Yoga bao nhiêu lần 1 tuần?",
           "answer" :"Tốt nhất là 3-5 ngày/ 1 tuần, mỗi lần tập từ 30p-1 tiếng \n Thời gian tập tốt nhất: sang sớm, tối muộn" 
         },
         {
           "question": "Can I practice Yoga to lose weight?",
-          "answer" :"Practicing yoga with proper posture will help the practitioner deal with fat loss (ex: cobra pose, bow pose, full boat pose..)"
+          "answer" :"Practicing Yoga with proper posture will help the practitioner deal with fat loss (ex: cobra pose, bow pose, full boat pose..)"
         }
       ]
     }

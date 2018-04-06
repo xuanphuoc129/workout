@@ -13,7 +13,7 @@
 </ion-header>
 
 
-<ion-content class="app-content">
+<ion-content class="app-content" no-bounce>
 
   <div class="done-content">
     <!-- kcal burned -->
@@ -67,10 +67,12 @@
 
 
   </div>
-
-</ion-content>
-<ion-footer>
-  <div text-center padding-bottom>
-    <button ion-button class="btn-bottom" (click)="backToHome()">{{language.backtohome}}</button>
+  <div class="bottom">
+    <div text-center padding-bottom>
+      <button ion-button class="btn-bottom" (click)="backToHome()">{{language.backtohome}}</button>
+    </div>
   </div>
-</ion-footer>
+</ion-content>
+
+ 
+

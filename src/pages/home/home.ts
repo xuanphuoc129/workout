@@ -40,7 +40,6 @@ export class HomePage {
     this.todayString = Untils.createDateString(this.today.getFullYear(), this.today.getMonth() + 1, this.today.getDate());
     this.calendar = new Calendar();
     this.loadLanguage();
-    // this.appController.clearAllData();
   }
 
   loadLanguage(){
@@ -50,6 +49,7 @@ export class HomePage {
 
 
   ionViewDidLoad() {
+    this.appController.clearAllData();
     this.load3Calendars();
     if(this.slides.length >0)this.translateAnimateBar(this.slides.length-1);
     this.appController.loadedDataChanel.asObservable().subscribe(()=>{

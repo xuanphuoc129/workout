@@ -19,12 +19,12 @@
       <div class="circle a3-container-center">
         <ion-icon [name]="item.icon" [style.color]="item.color"></ion-icon>
       </div>
-      <div class="name" [class.comingsoon]="i==2">{{item.name}}</div>
+      <div class="name normal-font" [class.comingsoon]="i==2">{{item.name}}</div>
     </div>
   </div>
 </ion-header>
 
-<ion-content>
+<ion-content no-bounce>
   <!-- <div class="padding-content"> -->
     <!-- coming soon -->
   <div *ngIf="tabIndex == 2" class="coming-soon a3-container-center">
@@ -79,14 +79,16 @@
         </div>
       </div>
 
-      <div class="btn-container flex align-items-center justify-content-center">
-        <button margin-right ion-button icon-only round class="btn-toolbar btn-bottom" (click)="unCheckAll()">
-          <ion-icon name="workout-icon-delete"></ion-icon>
-        </button>
-        <button [class.disable]="numberSelected < 2" ion-button class="btn-bottom w-60" (click)="createExercise()"> {{language.create}} </button>
-        <button margin-left ion-button icon-only round class="btn-toolbar btn-bottom" (click)="goToSetTime()">
-          <ion-icon name="workout-icon-setup"></ion-icon>
-        </button>
+      <div class="bottom-container">
+        <div class="btn-container flex align-items-center justify-content-center">
+          <button margin-right ion-button icon-only round class="btn-toolbar btn-bottom" (click)="unCheckAll()">
+            <ion-icon name="workout-icon-delete"></ion-icon>
+          </button>
+          <button [class.disable]="numberSelected < 2" ion-button class="btn-bottom w-60" (click)="createExercise()"> {{language.create}} </button>
+          <button margin-left ion-button icon-only round class="btn-toolbar btn-bottom" (click)="goToSetTime()">
+            <ion-icon name="workout-icon-setup"></ion-icon>
+          </button>
+        </div>
       </div>
     </div>
   <!-- </div> -->

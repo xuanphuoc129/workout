@@ -14,13 +14,30 @@
 // automatically applied to the <body> element in the app.
 @import "./theme/workout";
 // @import "./theme/stickman";
+
+@media (min-height: 667px) {
+  .bottom-container{
+    position: absolute;
+    bottom: 1.6rem;
+    left: 0;
+    width: 100%;
+  }
+}
+@media (min-width: 414px) {
+  .normal-font{
+    font-size: 1.8rem !important;
+  }
+  .small-font{
+    font-size: 1.4rem !important;
+  }
+}
 .hidden{
   display: none;
   opacity: 0;
 }
 .toolbar{
   &.toolbar-ios{
-    padding-top: 2rem; 
+    padding-top: 3rem; 
   }
 } 
 .font-myrid{
@@ -143,9 +160,8 @@ ion-title.title{
   border-radius: 27px;
   font-size: 2rem;
   padding: .8em 1.2em;
-  // font-family: "myriadpro" !important;
+  font-family: "myriadpro" !important;
   height: unset;
-  font-family: "myriadpro-semi" !important;
   
 }
 
@@ -181,7 +197,7 @@ ion-title.title{
   align-items: flex-end;
 }
 .padding-content {
-  padding: 1.2rem;
+  padding: 0 1.2rem;
 }
 
 .a-relative {

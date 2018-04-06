@@ -37,5 +37,11 @@ page-done-workout {
   .border-bottom{
       border-bottom: 1px solid rgba($color: map-get($map: $appColors, $key: blue), $alpha: .2);
   }
-  
+  .bottom{
+      position: absolute;
+      bottom: 1.6rem;
+      left: 0;
+      width: 100%;
+  }
+
 }

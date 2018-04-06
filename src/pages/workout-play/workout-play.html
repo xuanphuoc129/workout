@@ -21,7 +21,7 @@
 </ion-header>
 
 
-<ion-content class="app-content" #content no-bouce>
+<ion-content class="app-content" #content no-bounce>
   <div class="container">
 
     <!-- top container -->
@@ -32,7 +32,7 @@
           <span class="blue">{{workout.setDone}}</span><span>/{{exercise.getTotalExercise()}}</span>
         </div>
       </div>
-      <div class="type-text" [class.cardio]="exercise.type==1" [class.yoga]="exercise.type ==2"  [class.rest]="workout.type == 1">{{workout.text}}</div>
+      <div class="type-text" [class.cardio]="exercise.type==1" [class.yoga]="exercise.type ==2"  [class.rest]="workout.type >= 1">{{workout.text}}</div>
       <div class="square">
         <div class="small-font">{{language.reps}}</div>
         <div class="number">
@@ -48,7 +48,7 @@
           [class.cardio]="exercise.type==1" [class.yoga]="exercise.type ==2">
           <ion-icon *ngFor="let icon of workout.icons" [name]="icon"></ion-icon>
         </div>
-        <div class="a3-container-center" [class.freetime]="type != 1" [class.rest]="type==1" *ngIf="workout.type !=0 || workout.icons.length==0" [class.circle]="exercise.type==2" [class.cardio]="exercise.type==1">
+        <div class="a3-container-center" [class.freetime]="workout.type==-1" [class.rest]="workout.type >= 1" *ngIf="workout.type !=0 || workout.icons.length==0" [class.circle]="exercise.type==2" [class.cardio]="exercise.type==1">
           <ion-icon name="workout-icon-freetime"></ion-icon>
         </div>
       </div>
@@ -59,7 +59,7 @@
     <div class="total-container">
       <div class="box">
         <ion-row>
-          <ion-col col-6 class="title">
+          <ion-col col-6 class="title normal-font">
             <span>{{language.total}}</span>
           </ion-col>
           <ion-col col-4 offset-2 class="time-container">
@@ -73,7 +73,7 @@
         </ion-row>
         <div class="line"></div>
         <ion-row>
-          <ion-col col-6 class="title">
+          <ion-col col-6 class="title normal-font">
             <span>{{language.timenow}}</span>
           </ion-col>
           <ion-col col-4 offset-2 class="time-container">
@@ -89,14 +89,13 @@
     </div>
 
     <!-- buttons -->
-    <div class="button-container">
-      <button ion-button icon-only class="btn-bottom" (click)="playAndPause()">
-        <!-- <ion-icon *ngIf="!isPlay" name="workout-icon-play"></ion-icon> -->
-        <ion-icon *ngIf="workout.isRunning" name="workout-icon-pause"></ion-icon>
-        <span *ngIf="!workout.isRunning"> {{language.start}} </span>
-      </button>
-      <!-- <button ion-button class="btn-bottom" (click)="done()">Done</button> -->
+    <div class="bottom-container">
+      <div class="button-container">
+        <button ion-button icon-only class="btn-bottom" (click)="playAndPause()">
+          <ion-icon *ngIf="workout.isRunning" name="workout-icon-pause"></ion-icon>
+          <span *ngIf="!workout.isRunning"> {{language.start}} </span>
+        </button>
+      </div>
     </div>
-    <!-- <audio id="audio" src="./assets/audio/td_ding.ogg" type="audio/ogg" preload="auto"></audio> -->
   </div>
 </ion-content>

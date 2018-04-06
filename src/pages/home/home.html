@@ -20,7 +20,7 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content class="app-content">
+<ion-content class="app-content" no-bounce>
   <div class="padding-content a-relative">
     <div class="top">
       <!-- day of week -->
@@ -131,12 +131,11 @@
         </div>
       </div>
     </div>
-    <div class="btn-container">
+    <div class="bottom-container">
+      <div class="btn-container">
         <button class="btn-bottom" (click)="goToNewExercise()" ion-button> {{language.readyworkout}} </button>
       </div>
-
+    </div>
   </div>
 </ion-content>
-<ion-footer>
-  
-</ion-footer>
+

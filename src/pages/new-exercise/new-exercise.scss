@@ -4,6 +4,12 @@ page-new-exercise {
   //     min-height: 80px !important;
   //   }
   // }
+  @media (min-height: 730px) {
+    .exercise-box {
+      min-height: 86px !important;
+    }
+    
+  }
   ion-content.content {
     background: #232F4F;
   }
@@ -33,7 +39,7 @@ page-new-exercise {
       border-top-left-radius: 10px;
       border-top-right-radius: 10px;
       color: rgba($color: white, $alpha: .6); // background: #2D3E66;
-      &.comingsoon{
+      &.comingsoon {
         background: rgba($color: #232F4F, $alpha: .4);
       }
       .circle {
@@ -79,15 +85,15 @@ page-new-exercise {
       display: block;
     }
     .exercise-box {
-      min-height: 70px;
+      min-height: 66px;
       position: relative;
       &.selected {
         border: 1px solid map-get($map: $appColors, $key: blue);
       }
-      &.new-box{
+      &.new-box {
         background: rgba($color: #1CD3FF, $alpha: .23);
       }
-      .new-item{
+      .new-item {
         background-color: red;
         color: white;
         padding: .3rem 1rem;
@@ -97,7 +103,7 @@ page-new-exercise {
         right: -1rem;
         top: .6rem;
       }
-      .set-reps{
+      .set-reps {
         margin-top: .4rem;
       }
       .circle {
